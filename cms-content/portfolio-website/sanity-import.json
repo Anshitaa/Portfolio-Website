@@ -1,0 +1,1179 @@
+{
+  "documents": [
+    {
+      "_type": "personalInfo",
+      "_id": "personal-info",
+      "name": "Anshita Bhardwaj",
+      "title": "M.S. Data Science @ ASU | Specializing in Explainable AI",
+      "email": "anshita.inbox@gmail.com",
+      "phone": "+1 (480) 765-3612",
+      "linkedin": "https://www.linkedin.com/in/anshita--bhardwaj",
+      "github": "https://github.com/Anshitaa",
+      "location": "Tempe, AZ",
+      "summary": "Data Science graduate student with research experience in deep learning and NLP. Skilled in building end-to-end data pipelines, from extracting and validating large-scale datasets of over 1.5 million records to developing predictive models using LSTMs and Transformers.",
+      "bio": [
+        {
+          "_type": "block",
+          "_key": "bio-1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "bio-1-1",
+              "text": "I am a passionate Data Science graduate student at Arizona State University, specializing in Explainable AI and machine learning applications in healthcare. My research focuses on building transparent, fair, and responsible AI systems that can be trusted in critical decision-making scenarios."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "bio-2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "bio-2-1",
+              "text": "With hands-on experience in both industry and research settings, I have developed expertise in end-to-end data pipelines, from extracting and validating large-scale datasets to deploying production-ready AI models. My work spans across natural language processing, computer vision, and time-series analysis."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "bio-3",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "bio-3-1",
+              "text": "I am particularly interested in the intersection of AI and healthcare, where I have worked on projects involving diabetic patient readmission prediction, COVID-19 spread modeling, and deepfake detection. My goal is to create AI systems that are not only accurate but also explainable, fair, and beneficial to society."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_type": "project",
+      "_id": "project-1",
+      "title": "LLM-Powered Agent for Enterprise Document Intelligence",
+      "slug": {
+        "current": "llm-powered-agent-enterprise-document-intelligence"
+      },
+      "summary": "An enterprise-grade RAG pipeline and conversational agent for querying large knowledge bases, achieving a 75% reduction in answer-time.",
+      "description": [
+        {
+          "_type": "block",
+          "_key": "desc-1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-1-1",
+              "text": "Enabled accurate, on-demand querying of a large knowledge base, as measured by 95% retrieval accuracy and a 75% reduction in answer-time, by building a Retrieval-Augmented Generation (RAG) pipeline with LangChain and a ChromaDB vector database."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "desc-2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-2-1",
+              "text": "Developed a conversational AI agent that synthesizes complex information, as measured by its ability to generate coherent, multi-source summaries, by implementing a RAG architecture that feeds retrieved context into an LLM using advanced prompt engineering."
+            }
+          ]
+        }
+      ],
+      "techStack": [
+        "LLMs",
+        "RAG",
+        "LangChain",
+        "Vector Databases",
+        "Prompt Engineering",
+        "Python",
+        "ChromaDB",
+        "Streamlit"
+      ],
+      "githubUrl": "https://github.com/Anshitaa/Document-intelligence-agent",
+      "category": "ai-ml",
+      "featured": true,
+      "order": 1,
+      "achievements": [
+        "95% retrieval accuracy",
+        "75% reduction in answer-time",
+        "Enterprise-grade RAG pipeline",
+        "Multi-source information synthesis"
+      ],
+      "startDate": "2024-01-01",
+      "endDate": "2024-06-01"
+    },
+    {
+      "_type": "project",
+      "_id": "project-2",
+      "title": "Responsible AI for Healthcare Risk Prediction",
+      "slug": {
+        "current": "responsible-ai-healthcare-risk-prediction"
+      },
+      "summary": "A predictive model and dashboard for patient readmission risk that focuses on transparency (XAI) and fairness (Bias Mitigation).",
+      "description": [
+        {
+          "_type": "block",
+          "_key": "desc-1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-1-1",
+              "text": "Improved clinical trust and model transparency by implementing a SHAP-based dashboard to provide feature-level explanations for individual patient risk predictions."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "desc-2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-2-1",
+              "text": "Reduced demographic bias in predictions by 40% while maintaining 98% of baseline model accuracy, by auditing the system with Fairlearn and retraining it with fairness constraints."
+            }
+          ]
+        }
+      ],
+      "techStack": [
+        "XAI",
+        "SHAP",
+        "Responsible AI",
+        "Fairlearn",
+        "Scikit-learn",
+        "Python",
+        "Streamlit",
+        "Healthcare AI"
+      ],
+      "githubUrl": "https://github.com/Anshitaa/Responsible-AI-for-Predicting-Diabetic-Patient-Readmission",
+      "category": "research",
+      "featured": true,
+      "order": 2,
+      "achievements": [
+        "40% reduction in demographic bias",
+        "98% baseline model accuracy maintained",
+        "SHAP-based explainability dashboard",
+        "Clinical trust improvement"
+      ],
+      "startDate": "2024-02-01",
+      "endDate": "2024-08-01"
+    },
+    {
+      "_type": "project",
+      "_id": "project-3",
+      "title": "End-to-End MLOps Pipeline for Real-Time Anomaly Detection",
+      "slug": {
+        "current": "end-to-end-mlops-pipeline-real-time-anomaly-detection"
+      },
+      "summary": "A production-grade MLOps pipeline for real-time anomaly detection using Kafka for streaming, Spark for processing, and Kubernetes for deployment.",
+      "description": [
+        {
+          "_type": "block",
+          "_key": "desc-1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-1-1",
+              "text": "Engineered a high-throughput streaming data pipeline capable of processing 10,000+ events per minute with sub-second latency, using Kafka for data ingestion and Apache Spark for real-time inference."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "desc-2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-2-1",
+              "text": "Achieved automated scaling and fault tolerance by deploying the containerized Spark application on a Kubernetes cluster, ensuring high availability."
+            }
+          ]
+        }
+      ],
+      "techStack": [
+        "MLOps",
+        "Apache Spark",
+        "Kafka",
+        "Kubernetes",
+        "Docker",
+        "Python",
+        "Real-Time Streaming"
+      ],
+      "githubUrl": "https://github.com/Anshitaa/End-to-End-MLOps-Pipeline-for-Real-Time-Anomaly-Detection",
+      "category": "data-science",
+      "featured": true,
+      "order": 3,
+      "achievements": [
+        "10,000+ events per minute processing",
+        "Sub-second latency",
+        "Automated scaling and fault tolerance",
+        "Production-grade deployment"
+      ],
+      "startDate": "2023-09-01",
+      "endDate": "2024-01-01"
+    },
+    {
+      "_type": "project",
+      "_id": "project-4",
+      "title": "Full-Stack LLM Agent with a Dynamic Knowledge Base",
+      "slug": {
+        "current": "full-stack-llm-agent-dynamic-knowledge-base"
+      },
+      "summary": "A user-facing, full-stack AI application featuring a React frontend and a FastAPI backend, allowing users to both chat with an agent and dynamically update its knowledge base via document uploads.",
+      "description": [
+        {
+          "_type": "block",
+          "_key": "desc-1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-1-1",
+              "text": "Architected and deployed a full-stack, user-facing AI application, as measured by the successful integration of a React frontend with a Python FastAPI backend, achieving a sub-200ms API response time."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "desc-2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-2-1",
+              "text": "Enabled real-time knowledge base expansion, as measured by the development of a file upload endpoint that automatically processes, embeds, and integrates new documents into a vector database."
+            }
+          ]
+        }
+      ],
+      "techStack": [
+        "Full-Stack Development",
+        "React",
+        "FastAPI",
+        "LLMs",
+        "RAG",
+        "LangChain",
+        "Docker",
+        "AWS"
+      ],
+      "githubUrl": "https://github.com/Anshitaa/Full-Stack-LLM-Agent-with-a-Dynamic-Knowledge-Base",
+      "category": "full-stack",
+      "featured": false,
+      "order": 4,
+      "achievements": [
+        "Sub-200ms API response time",
+        "Real-time knowledge base expansion",
+        "Full-stack integration",
+        "Dynamic document processing"
+      ],
+      "startDate": "2024-03-01",
+      "endDate": "2024-07-01"
+    },
+    {
+      "_type": "project",
+      "_id": "project-5",
+      "title": "OS Scheduler Pro: Visual Process Management",
+      "slug": {
+        "current": "os-scheduler-pro-visual-process-management"
+      },
+      "summary": "A Python-based desktop simulator using Tkinter and Matplotlib to visualize core OS scheduling algorithms like FCFS, SJF, and Round Robin.",
+      "description": [
+        {
+          "_type": "block",
+          "_key": "desc-1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-1-1",
+              "text": "Developed a Python-based Process Scheduling Simulator using Tkinter and Matplotlib to visualize algorithms like FCFS, SJF, Priority, and Round Robin."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "desc-2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-2-1",
+              "text": "Optimized the software to handle up to 1,000 processes with real-time Gantt chart visualization, reducing average waiting time by 20%."
+            }
+          ]
+        }
+      ],
+      "techStack": [
+        "Python",
+        "Tkinter",
+        "Matplotlib",
+        "Algorithms",
+        "Data Visualization",
+        "Operating Systems"
+      ],
+      "githubUrl": "https://github.com/Anshitaa/OS-Scheduler-Pro-Visual-Process-Management",
+      "category": "tools",
+      "featured": false,
+      "order": 5,
+      "achievements": [
+        "1,000 processes handling capability",
+        "20% reduction in average waiting time",
+        "Real-time Gantt chart visualization",
+        "Multiple scheduling algorithms"
+      ],
+      "startDate": "2023-05-01",
+      "endDate": "2023-08-01"
+    },
+    {
+      "_type": "project",
+      "_id": "project-6",
+      "title": "Sentiment Analysis in Twitter using LSTM Networks",
+      "slug": {
+        "current": "sentiment-analysis-twitter-lstm-networks"
+      },
+      "summary": "Applied LSTM networks with GloVe embeddings to a 2.5M tweet dataset, achieving 91.02% validation accuracy.",
+      "description": [
+        {
+          "_type": "block",
+          "_key": "desc-1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-1-1",
+              "text": "Applied LSTM networks with GloVe embeddings to a 2.5M tweet dataset, achieving 91.02% validation accuracy by optimizing preprocessing for sequential input."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "desc-2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-2-1",
+              "text": "Outperformed baseline models like Naive Bayes and Decision Trees by over 20%, demonstrating improved classification precision through enhanced data cleaning and transformation."
+            }
+          ]
+        }
+      ],
+      "techStack": [
+        "NLP",
+        "LSTM",
+        "Deep Learning",
+        "Python",
+        "GloVe",
+        "TensorFlow",
+        "Sentiment Analysis"
+      ],
+      "githubUrl": "https://github.com/Anshitaa/Sentiment-Analysis",
+      "category": "ai-ml",
+      "featured": false,
+      "order": 6,
+      "achievements": [
+        "91.02% validation accuracy",
+        "2.5M tweet dataset processing",
+        "20% improvement over baseline models",
+        "Advanced preprocessing optimization"
+      ],
+      "startDate": "2023-03-01",
+      "endDate": "2023-06-01"
+    },
+    {
+      "_type": "experience",
+      "_id": "experience-1",
+      "company": "Arizona State University",
+      "position": "Research Assistant",
+      "location": "Tempe, AZ",
+      "startDate": "2024-09-01",
+      "endDate": null,
+      "isCurrent": true,
+      "description": [
+        {
+          "_type": "block",
+          "_key": "desc-1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-1-1",
+              "text": "Orchestrated the successful extraction of a high-resolution dataset, compiling 1.5 million records across 28 years by scripting an automated Python solution to bypass CDC portal query limits."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "desc-2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-2-1",
+              "text": "Enhanced a raw hazard dataset for feature engineering, increasing data granularity 200-fold by executing a data validation pipeline and performing root cause analysis."
+            }
+          ]
+        }
+      ],
+      "achievements": [
+        "Compiled 1.5 million records across 28 years",
+        "200-fold increase in data granularity",
+        "Automated Python solution for CDC portal",
+        "Data validation pipeline implementation"
+      ],
+      "skills": [
+        "Python",
+        "Data Extraction",
+        "Data Cleaning",
+        "Data Validation",
+        "Root Cause Analysis",
+        "Schema Design"
+      ],
+      "order": 0
+    },
+    {
+      "_type": "experience",
+      "_id": "experience-2",
+      "company": "Escorts Kubota Limited",
+      "position": "Data Analyst Intern",
+      "location": "Haryana, India",
+      "startDate": "2023-06-01",
+      "endDate": "2024-06-01",
+      "isCurrent": false,
+      "description": [
+        {
+          "_type": "block",
+          "_key": "desc-1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-1-1",
+              "text": "Optimized production planning by 25%, reduced inventory costs by 10%, and improved on-time deliveries by 15% through advanced data analysis and forecasting models."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "desc-2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-2-1",
+              "text": "Used LSTM models to forecast demand for 50+ products across 3 plants, enhancing resource allocation and supply chain efficiency."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "desc-3",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-3-1",
+              "text": "Improved predictive accuracy by 18% by integrating sales data with external economic factors, resulting in better demand forecasting and inventory management."
+            }
+          ]
+        }
+      ],
+      "achievements": [
+        "25% improvement in production planning",
+        "10% reduction in inventory costs",
+        "15% improvement in on-time deliveries",
+        "18% improvement in predictive accuracy",
+        "LSTM models for 50+ products across 3 plants"
+      ],
+      "skills": [
+        "LSTM",
+        "Time Series Analysis",
+        "Demand Forecasting",
+        "Supply Chain Analytics",
+        "Production Planning",
+        "Inventory Management"
+      ],
+      "order": 1
+    },
+    {
+      "_type": "experience",
+      "_id": "experience-3",
+      "company": "Justdial Ltd.",
+      "position": "Data Analyst Intern",
+      "location": "Maharashtra, India",
+      "startDate": "2022-06-01",
+      "endDate": "2022-08-01",
+      "isCurrent": false,
+      "description": [
+        {
+          "_type": "block",
+          "_key": "desc-1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-1-1",
+              "text": "Developed a sentiment analysis tool using BERT and Transformers, achieving 92% classification accuracy across 10,000+ customer reviews."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "desc-2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-2-1",
+              "text": "Collaborated with engineering and marketing teams to implement keyword extraction using TF-IDF, leading to a 15% increase in keyword relevance."
+            }
+          ]
+        }
+      ],
+      "achievements": [
+        "92% classification accuracy on sentiment analysis",
+        "10,000+ customer reviews processed",
+        "15% increase in keyword relevance",
+        "BERT and Transformers implementation"
+      ],
+      "skills": [
+        "BERT",
+        "Transformers",
+        "Sentiment Analysis",
+        "TF-IDF",
+        "NLP",
+        "Customer Analytics",
+        "Keyword Extraction"
+      ],
+      "order": 2
+    },
+    {
+      "_type": "education",
+      "_id": "education-1",
+      "institution": "Arizona State University",
+      "degree": "Master of Science in Data Science, Analytics and Engineering",
+      "field": "Data Science, Analytics and Engineering",
+      "location": "Tempe, AZ",
+      "startDate": "2024-08-01",
+      "endDate": "2026-05-01",
+      "isCurrent": true,
+      "description": "Graduate program focusing on advanced data science methodologies, machine learning, and analytics engineering with emphasis on explainable AI and responsible AI practices.",
+      "relevantCoursework": [
+        "Machine Learning and Data Mining",
+        "Statistical Methods for Data Science",
+        "Big Data Analytics",
+        "Data Engineering and MLOps",
+        "Explainable AI and Interpretable Models",
+        "Deep Learning and Neural Networks"
+      ],
+      "achievements": [
+        "Research Assistant in AI/ML Lab",
+        "Focus on Explainable AI and Healthcare Applications",
+        "Active in AI Ethics and Responsible AI Research"
+      ],
+      "order": 0
+    },
+    {
+      "_type": "education",
+      "_id": "education-2",
+      "institution": "Amity University",
+      "degree": "Bachelor of Technology in Computer Science and Engineering",
+      "field": "Computer Science and Engineering",
+      "location": "Rajasthan, India",
+      "startDate": "2020-08-01",
+      "endDate": "2024-05-01",
+      "isCurrent": false,
+      "description": "Undergraduate program covering fundamental computer science concepts, software engineering, and specialized courses in artificial intelligence and machine learning.",
+      "relevantCoursework": [
+        "Data Structures and Algorithms",
+        "Machine Learning",
+        "Artificial Intelligence",
+        "Database Management Systems",
+        "Software Engineering",
+        "Computer Networks",
+        "Operating Systems"
+      ],
+      "achievements": [
+        "Published multiple research papers in AI conferences",
+        "Active participation in technical competitions",
+        "Strong foundation in programming and software development"
+      ],
+      "order": 1
+    },
+    {
+      "_type": "skill",
+      "_id": "skill-1",
+      "name": "Python",
+      "category": "programming",
+      "level": "expert",
+      "yearsExperience": 4,
+      "description": "Primary programming language for data science, machine learning, and web development",
+      "icon": "python",
+      "color": "#3776AB",
+      "featured": true,
+      "order": 1
+    },
+    {
+      "_type": "skill",
+      "_id": "skill-2",
+      "name": "TensorFlow",
+      "category": "ai-ml",
+      "level": "advanced",
+      "yearsExperience": 3,
+      "description": "Deep learning framework for building and training neural networks",
+      "icon": "tensorflow",
+      "color": "#FF6F00",
+      "featured": true,
+      "order": 2
+    },
+    {
+      "_type": "skill",
+      "_id": "skill-3",
+      "name": "PyTorch",
+      "category": "ai-ml",
+      "level": "advanced",
+      "yearsExperience": 2,
+      "description": "Deep learning framework for research and production applications",
+      "icon": "pytorch",
+      "color": "#EE4C2C",
+      "featured": true,
+      "order": 3
+    },
+    {
+      "_type": "skill",
+      "_id": "skill-4",
+      "name": "LangChain",
+      "category": "ai-ml",
+      "level": "advanced",
+      "yearsExperience": 2,
+      "description": "Framework for building LLM applications and RAG systems",
+      "icon": "langchain",
+      "color": "#1C3C3C",
+      "featured": true,
+      "order": 4
+    },
+    {
+      "_type": "skill",
+      "_id": "skill-5",
+      "name": "React",
+      "category": "frameworks",
+      "level": "intermediate",
+      "yearsExperience": 2,
+      "description": "Frontend library for building user interfaces",
+      "icon": "react",
+      "color": "#61DAFB",
+      "featured": true,
+      "order": 5
+    },
+    {
+      "_type": "skill",
+      "_id": "skill-6",
+      "name": "FastAPI",
+      "category": "frameworks",
+      "level": "advanced",
+      "yearsExperience": 2,
+      "description": "Modern Python web framework for building APIs",
+      "icon": "fastapi",
+      "color": "#009688",
+      "featured": true,
+      "order": 6
+    },
+    {
+      "_type": "skill",
+      "_id": "skill-7",
+      "name": "Apache Spark",
+      "category": "tools",
+      "level": "intermediate",
+      "yearsExperience": 1,
+      "description": "Big data processing and analytics engine",
+      "icon": "spark",
+      "color": "#E25A1C",
+      "featured": false,
+      "order": 7
+    },
+    {
+      "_type": "skill",
+      "_id": "skill-8",
+      "name": "Kubernetes",
+      "category": "cloud",
+      "level": "intermediate",
+      "yearsExperience": 1,
+      "description": "Container orchestration platform for deploying applications",
+      "icon": "kubernetes",
+      "color": "#326CE5",
+      "featured": false,
+      "order": 8
+    },
+    {
+      "_type": "skill",
+      "_id": "skill-9",
+      "name": "Docker",
+      "category": "cloud",
+      "level": "intermediate",
+      "yearsExperience": 2,
+      "description": "Containerization platform for application deployment",
+      "icon": "docker",
+      "color": "#2496ED",
+      "featured": false,
+      "order": 9
+    },
+    {
+      "_type": "skill",
+      "_id": "skill-10",
+      "name": "AWS",
+      "category": "cloud",
+      "level": "intermediate",
+      "yearsExperience": 2,
+      "description": "Cloud computing platform for scalable applications",
+      "icon": "aws",
+      "color": "#FF9900",
+      "featured": false,
+      "order": 10
+    },
+    {
+      "_type": "skill",
+      "_id": "skill-11",
+      "name": "PostgreSQL",
+      "category": "databases",
+      "level": "advanced",
+      "yearsExperience": 3,
+      "description": "Open-source relational database management system",
+      "icon": "postgresql",
+      "color": "#336791",
+      "featured": false,
+      "order": 11
+    },
+    {
+      "_type": "skill",
+      "_id": "skill-12",
+      "name": "MongoDB",
+      "category": "databases",
+      "level": "intermediate",
+      "yearsExperience": 2,
+      "description": "NoSQL document database for flexible data storage",
+      "icon": "mongodb",
+      "color": "#47A248",
+      "featured": false,
+      "order": 12
+    },
+    {
+      "_type": "skill",
+      "_id": "skill-13",
+      "name": "Scikit-learn",
+      "category": "ai-ml",
+      "level": "advanced",
+      "yearsExperience": 3,
+      "description": "Machine learning library for Python",
+      "icon": "scikit-learn",
+      "color": "#F7931E",
+      "featured": false,
+      "order": 13
+    },
+    {
+      "_type": "skill",
+      "_id": "skill-14",
+      "name": "SHAP",
+      "category": "ai-ml",
+      "level": "advanced",
+      "yearsExperience": 2,
+      "description": "Framework for explaining machine learning model outputs",
+      "icon": "shap",
+      "color": "#7C3AED",
+      "featured": false,
+      "order": 14
+    },
+    {
+      "_type": "skill",
+      "_id": "skill-15",
+      "name": "Tableau",
+      "category": "visualization",
+      "level": "intermediate",
+      "yearsExperience": 2,
+      "description": "Data visualization and business intelligence platform",
+      "icon": "tableau",
+      "color": "#1F4E79",
+      "featured": false,
+      "order": 15
+    },
+    {
+      "_type": "skill",
+      "_id": "skill-16",
+      "name": "Git",
+      "category": "tools",
+      "level": "advanced",
+      "yearsExperience": 4,
+      "description": "Version control system for tracking code changes",
+      "icon": "git",
+      "color": "#F05032",
+      "featured": false,
+      "order": 16
+    },
+    {
+      "_type": "publication",
+      "_id": "publication-1",
+      "title": "Artificial Intelligence Hallucinations Fueling Deepfake Threats: Detection and Prevention Approaches",
+      "slug": {
+        "current": "ai-hallucinations-deepfake-detection-prevention"
+      },
+      "authors": [
+        "Anshita Bhardwaj"
+      ],
+      "year": 2024,
+      "status": "not-published",
+      "abstract": "This research presents a hallucination-aware deepfake classifier using the FaceForensics++ dataset, extracting and processing faces with MTCNN and training models in PyTorch. The study introduces a novel hallucination divergence metric that reveals significant distribution shifts between real and synthetic data.",
+      "description": [
+        {
+          "_type": "block",
+          "_key": "desc-1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-1-1",
+              "text": "Built a hallucination-aware deepfake classifier using the FaceForensics++ dataset, extracting and processing faces with MTCNN and training models in PyTorch."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "desc-2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-2-1",
+              "text": "Achieved an overall accuracy of 92.3% on deepfake classification using a CNN-based model with advanced preprocessing techniques."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "desc-3",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-3-1",
+              "text": "Introduced a hallucination divergence metric that revealed a significant distribution shift between real and synthetic data, improving detection precision through comparative analysis."
+            }
+          ]
+        }
+      ],
+      "keyFindings": [
+        "92.3% accuracy on deepfake classification",
+        "Novel hallucination divergence metric",
+        "Significant distribution shift detection",
+        "0.87 Pearson correlation between hallucinated and deepfake outputs"
+      ],
+      "technologies": [
+        "PyTorch",
+        "MTCNN",
+        "CNN",
+        "FaceForensics++",
+        "Computer Vision",
+        "Deep Learning"
+      ],
+      "datasets": [
+        "FaceForensics++"
+      ],
+      "metrics": [
+        "92.3% classification accuracy",
+        "Pearson correlation: 0.87"
+      ],
+      "featured": true,
+      "order": 1
+    },
+    {
+      "_type": "publication",
+      "_id": "publication-2",
+      "title": "Optimizing LSTM Hyperparameters with Genetic Algorithms",
+      "slug": {
+        "current": "optimizing-lstm-hyperparameters-genetic-algorithms"
+      },
+      "authors": [
+        "Anshita Bhardwaj"
+      ],
+      "year": 2024,
+      "status": "not-published",
+      "abstract": "This study demonstrates the effectiveness of genetic algorithms in optimizing LSTM hyperparameters on the IMDB dataset, achieving superior performance compared to traditional optimization methods while reducing computational time.",
+      "description": [
+        {
+          "_type": "block",
+          "_key": "desc-1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-1-1",
+              "text": "Tuned LSTM hyperparameters on the IMDB dataset using genetic algorithms (GA), achieving an AUC of 0.946 with optimized network architecture."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "desc-2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-2-1",
+              "text": "Reduced model convergence time by 35% and demonstrated GA's superior balance of computational efficiency and model performance compared to grid search and random search methods."
+            }
+          ]
+        }
+      ],
+      "keyFindings": [
+        "AUC of 0.946 on IMDB sentiment analysis",
+        "35% reduction in convergence time",
+        "Superior efficiency compared to traditional methods",
+        "Optimal balance of performance and computational cost"
+      ],
+      "technologies": [
+        "LSTM",
+        "Genetic Algorithms",
+        "Hyperparameter Optimization",
+        "TensorFlow",
+        "NLP"
+      ],
+      "datasets": [
+        "IMDB Movie Reviews"
+      ],
+      "metrics": [
+        "AUC: 0.946",
+        "35% faster convergence"
+      ],
+      "featured": false,
+      "order": 2
+    },
+    {
+      "_type": "publication",
+      "_id": "publication-3",
+      "title": "Reimagining CAPTCHA Security: A Case for Retiring Alphanumeric Text-Based CAPTCHAs",
+      "slug": {
+        "current": "reimagining-captcha-security-retiring-alphanumeric"
+      },
+      "authors": [
+        "Anshita Bhardwaj"
+      ],
+      "venue": "AIAMMS-2023",
+      "year": 2023,
+      "status": "published",
+      "abstract": "This paper proposes replacing outdated alphanumeric CAPTCHA systems with a CNN-based model using RetinaNet, demonstrating superior security and user experience through advanced computer vision techniques.",
+      "description": [
+        {
+          "_type": "block",
+          "_key": "desc-1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-1-1",
+              "text": "Replaced outdated alphanumeric CAPTCHA systems with a CNN-based model using RetinaNet in Python, achieving 95% accuracy across a 50,000-image dataset."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "desc-2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-2-1",
+              "text": "Boosted dataset efficiency by 40% through advanced preprocessing techniques, improving both security and user experience compared to traditional text-based CAPTCHAs."
+            }
+          ]
+        }
+      ],
+      "keyFindings": [
+        "95% accuracy on 50,000-image dataset",
+        "40% improvement in dataset efficiency",
+        "Superior security compared to text-based CAPTCHAs",
+        "Enhanced user experience with visual recognition"
+      ],
+      "technologies": [
+        "CNN",
+        "RetinaNet",
+        "Computer Vision",
+        "Python",
+        "CAPTCHA Security"
+      ],
+      "datasets": [
+        "50,000 CAPTCHA images"
+      ],
+      "metrics": [
+        "95% classification accuracy",
+        "40% efficiency improvement"
+      ],
+      "featured": false,
+      "order": 3
+    },
+    {
+      "_type": "publication",
+      "_id": "publication-4",
+      "title": "Modeling the Spread of COVID-19 in Lombardy: Adaptation of the SEIQRS Mathematical Framework",
+      "slug": {
+        "current": "modeling-covid19-spread-lombardy-seiqrs-framework"
+      },
+      "authors": [
+        "Anshita Bhardwaj"
+      ],
+      "venue": "AIAMMS-2023",
+      "year": 2023,
+      "status": "published",
+      "abstract": "This study adapts the SEIQRS epidemiological model to forecast COVID-19 spread in Lombardy, Italy, integrating dynamic parameters like social distancing and testing rates for improved prediction accuracy.",
+      "description": [
+        {
+          "_type": "block",
+          "_key": "desc-1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-1-1",
+              "text": "Adapted the SEIQRS epidemiological model to forecast COVID-19 spread, integrating dynamic parameters like social distancing and testing rates for comprehensive pandemic modeling."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "desc-2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-2-1",
+              "text": "Enhanced prediction reliability using Profile Likelihood Fit, achieving a 30% accuracy boost compared to baseline epidemiological models."
+            }
+          ]
+        }
+      ],
+      "keyFindings": [
+        "30% accuracy improvement over baseline models",
+        "Integration of social distancing parameters",
+        "Dynamic testing rate adaptation",
+        "Improved pandemic forecasting reliability"
+      ],
+      "technologies": [
+        "Mathematical Modeling",
+        "SEIQRS Framework",
+        "Profile Likelihood Fit",
+        "Epidemiology",
+        "Python"
+      ],
+      "datasets": [
+        "COVID-19 Lombardy Data"
+      ],
+      "metrics": [
+        "30% accuracy improvement",
+        "Enhanced prediction reliability"
+      ],
+      "featured": false,
+      "order": 4
+    },
+    {
+      "_type": "publication",
+      "_id": "publication-5",
+      "title": "Unleashing the Power of LSTM Networks for Sentiment Analysis in Twitter",
+      "slug": {
+        "current": "lstm-networks-sentiment-analysis-twitter"
+      },
+      "authors": [
+        "Anshita Bhardwaj"
+      ],
+      "venue": "AIAMMS-2023",
+      "year": 2023,
+      "status": "published",
+      "abstract": "This research applies LSTM networks with GloVe embeddings to a massive 2.5M tweet dataset, achieving superior sentiment classification performance compared to traditional machine learning approaches.",
+      "description": [
+        {
+          "_type": "block",
+          "_key": "desc-1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-1-1",
+              "text": "Applied LSTM networks with GloVe embeddings to a 2.5M tweet dataset, achieving 91.02% validation accuracy through optimized preprocessing for sequential input."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "desc-2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "desc-2-1",
+              "text": "Outperformed baseline models like Naive Bayes and Decision Trees by over 20%, demonstrating improved classification precision through enhanced data cleaning and transformation techniques."
+            }
+          ]
+        }
+      ],
+      "keyFindings": [
+        "91.02% validation accuracy on 2.5M tweets",
+        "20% improvement over baseline models",
+        "Optimized preprocessing for sequential data",
+        "Enhanced classification precision"
+      ],
+      "technologies": [
+        "LSTM",
+        "GloVe Embeddings",
+        "NLP",
+        "TensorFlow",
+        "Sentiment Analysis"
+      ],
+      "datasets": [
+        "2.5M Twitter dataset"
+      ],
+      "metrics": [
+        "91.02% validation accuracy",
+        "20% improvement over baselines"
+      ],
+      "featured": true,
+      "order": 5
+    }
+  ]
+}

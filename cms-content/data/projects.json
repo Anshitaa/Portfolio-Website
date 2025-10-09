@@ -1,0 +1,302 @@
+[
+  {
+    "_type": "project",
+    "_id": "project-1",
+    "title": "LLM-Powered Agent for Enterprise Document Intelligence",
+    "slug": {
+      "current": "llm-powered-agent-enterprise-document-intelligence"
+    },
+    "summary": "An enterprise-grade RAG pipeline and conversational agent for querying large knowledge bases, achieving a 75% reduction in answer-time.",
+    "description": [
+      {
+        "_type": "block",
+        "_key": "desc-1",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-1-1",
+            "text": "Enabled accurate, on-demand querying of a large knowledge base, as measured by 95% retrieval accuracy and a 75% reduction in answer-time, by building a Retrieval-Augmented Generation (RAG) pipeline with LangChain and a ChromaDB vector database."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "desc-2",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-2-1",
+            "text": "Developed a conversational AI agent that synthesizes complex information, as measured by its ability to generate coherent, multi-source summaries, by implementing a RAG architecture that feeds retrieved context into an LLM using advanced prompt engineering."
+          }
+        ]
+      }
+    ],
+    "techStack": ["LLMs", "RAG", "LangChain", "Vector Databases", "Prompt Engineering", "Python", "ChromaDB", "Streamlit"],
+    "githubUrl": "https://github.com/Anshitaa/Document-intelligence-agent",
+    "category": "ai-ml",
+    "featured": true,
+    "order": 1,
+    "achievements": [
+      "95% retrieval accuracy",
+      "75% reduction in answer-time",
+      "Enterprise-grade RAG pipeline",
+      "Multi-source information synthesis"
+    ],
+    "startDate": "2024-01-01",
+    "endDate": "2024-06-01"
+  },
+  {
+    "_type": "project",
+    "_id": "project-2",
+    "title": "Responsible AI for Healthcare Risk Prediction",
+    "slug": {
+      "current": "responsible-ai-healthcare-risk-prediction"
+    },
+    "summary": "A predictive model and dashboard for patient readmission risk that focuses on transparency (XAI) and fairness (Bias Mitigation).",
+    "description": [
+      {
+        "_type": "block",
+        "_key": "desc-1",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-1-1",
+            "text": "Improved clinical trust and model transparency by implementing a SHAP-based dashboard to provide feature-level explanations for individual patient risk predictions."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "desc-2",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-2-1",
+            "text": "Reduced demographic bias in predictions by 40% while maintaining 98% of baseline model accuracy, by auditing the system with Fairlearn and retraining it with fairness constraints."
+          }
+        ]
+      }
+    ],
+    "techStack": ["XAI", "SHAP", "Responsible AI", "Fairlearn", "Scikit-learn", "Python", "Streamlit", "Healthcare AI"],
+    "githubUrl": "https://github.com/Anshitaa/Responsible-AI-for-Predicting-Diabetic-Patient-Readmission",
+    "category": "research",
+    "featured": true,
+    "order": 2,
+    "achievements": [
+      "40% reduction in demographic bias",
+      "98% baseline model accuracy maintained",
+      "SHAP-based explainability dashboard",
+      "Clinical trust improvement"
+    ],
+    "startDate": "2024-02-01",
+    "endDate": "2024-08-01"
+  },
+  {
+    "_type": "project",
+    "_id": "project-3",
+    "title": "End-to-End MLOps Pipeline for Real-Time Anomaly Detection",
+    "slug": {
+      "current": "end-to-end-mlops-pipeline-real-time-anomaly-detection"
+    },
+    "summary": "A production-grade MLOps pipeline for real-time anomaly detection using Kafka for streaming, Spark for processing, and Kubernetes for deployment.",
+    "description": [
+      {
+        "_type": "block",
+        "_key": "desc-1",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-1-1",
+            "text": "Engineered a high-throughput streaming data pipeline capable of processing 10,000+ events per minute with sub-second latency, using Kafka for data ingestion and Apache Spark for real-time inference."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "desc-2",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-2-1",
+            "text": "Achieved automated scaling and fault tolerance by deploying the containerized Spark application on a Kubernetes cluster, ensuring high availability."
+          }
+        ]
+      }
+    ],
+    "techStack": ["MLOps", "Apache Spark", "Kafka", "Kubernetes", "Docker", "Python", "Real-Time Streaming"],
+    "githubUrl": "https://github.com/Anshitaa/End-to-End-MLOps-Pipeline-for-Real-Time-Anomaly-Detection",
+    "category": "data-science",
+    "featured": true,
+    "order": 3,
+    "achievements": [
+      "10,000+ events per minute processing",
+      "Sub-second latency",
+      "Automated scaling and fault tolerance",
+      "Production-grade deployment"
+    ],
+    "startDate": "2023-09-01",
+    "endDate": "2024-01-01"
+  },
+  {
+    "_type": "project",
+    "_id": "project-4",
+    "title": "Full-Stack LLM Agent with a Dynamic Knowledge Base",
+    "slug": {
+      "current": "full-stack-llm-agent-dynamic-knowledge-base"
+    },
+    "summary": "A user-facing, full-stack AI application featuring a React frontend and a FastAPI backend, allowing users to both chat with an agent and dynamically update its knowledge base via document uploads.",
+    "description": [
+      {
+        "_type": "block",
+        "_key": "desc-1",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-1-1",
+            "text": "Architected and deployed a full-stack, user-facing AI application, as measured by the successful integration of a React frontend with a Python FastAPI backend, achieving a sub-200ms API response time."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "desc-2",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-2-1",
+            "text": "Enabled real-time knowledge base expansion, as measured by the development of a file upload endpoint that automatically processes, embeds, and integrates new documents into a vector database."
+          }
+        ]
+      }
+    ],
+    "techStack": ["Full-Stack Development", "React", "FastAPI", "LLMs", "RAG", "LangChain", "Docker", "AWS"],
+    "githubUrl": "https://github.com/Anshitaa/Full-Stack-LLM-Agent-with-a-Dynamic-Knowledge-Base",
+    "category": "full-stack",
+    "featured": false,
+    "order": 4,
+    "achievements": [
+      "Sub-200ms API response time",
+      "Real-time knowledge base expansion",
+      "Full-stack integration",
+      "Dynamic document processing"
+    ],
+    "startDate": "2024-03-01",
+    "endDate": "2024-07-01"
+  },
+  {
+    "_type": "project",
+    "_id": "project-5",
+    "title": "OS Scheduler Pro: Visual Process Management",
+    "slug": {
+      "current": "os-scheduler-pro-visual-process-management"
+    },
+    "summary": "A Python-based desktop simulator using Tkinter and Matplotlib to visualize core OS scheduling algorithms like FCFS, SJF, and Round Robin.",
+    "description": [
+      {
+        "_type": "block",
+        "_key": "desc-1",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-1-1",
+            "text": "Developed a Python-based Process Scheduling Simulator using Tkinter and Matplotlib to visualize algorithms like FCFS, SJF, Priority, and Round Robin."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "desc-2",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-2-1",
+            "text": "Optimized the software to handle up to 1,000 processes with real-time Gantt chart visualization, reducing average waiting time by 20%."
+          }
+        ]
+      }
+    ],
+    "techStack": ["Python", "Tkinter", "Matplotlib", "Algorithms", "Data Visualization", "Operating Systems"],
+    "githubUrl": "https://github.com/Anshitaa/OS-Scheduler-Pro-Visual-Process-Management",
+    "category": "tools",
+    "featured": false,
+    "order": 5,
+    "achievements": [
+      "1,000 processes handling capability",
+      "20% reduction in average waiting time",
+      "Real-time Gantt chart visualization",
+      "Multiple scheduling algorithms"
+    ],
+    "startDate": "2023-05-01",
+    "endDate": "2023-08-01"
+  },
+  {
+    "_type": "project",
+    "_id": "project-6",
+    "title": "Sentiment Analysis in Twitter using LSTM Networks",
+    "slug": {
+      "current": "sentiment-analysis-twitter-lstm-networks"
+    },
+    "summary": "Applied LSTM networks with GloVe embeddings to a 2.5M tweet dataset, achieving 91.02% validation accuracy.",
+    "description": [
+      {
+        "_type": "block",
+        "_key": "desc-1",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-1-1",
+            "text": "Applied LSTM networks with GloVe embeddings to a 2.5M tweet dataset, achieving 91.02% validation accuracy by optimizing preprocessing for sequential input."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "desc-2",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-2-1",
+            "text": "Outperformed baseline models like Naive Bayes and Decision Trees by over 20%, demonstrating improved classification precision through enhanced data cleaning and transformation."
+          }
+        ]
+      }
+    ],
+    "techStack": ["NLP", "LSTM", "Deep Learning", "Python", "GloVe", "TensorFlow", "Sentiment Analysis"],
+    "githubUrl": "https://github.com/Anshitaa/Sentiment-Analysis",
+    "category": "ai-ml",
+    "featured": false,
+    "order": 6,
+    "achievements": [
+      "91.02% validation accuracy",
+      "2.5M tweet dataset processing",
+      "20% improvement over baseline models",
+      "Advanced preprocessing optimization"
+    ],
+    "startDate": "2023-03-01",
+    "endDate": "2023-06-01"
+  }
+]

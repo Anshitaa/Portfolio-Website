@@ -1,0 +1,273 @@
+[
+  {
+    "_type": "publication",
+    "_id": "publication-1",
+    "title": "Artificial Intelligence Hallucinations Fueling Deepfake Threats: Detection and Prevention Approaches",
+    "slug": {
+      "current": "ai-hallucinations-deepfake-detection-prevention"
+    },
+    "authors": ["Anshita Bhardwaj"],
+    "year": 2024,
+    "status": "not-published",
+    "abstract": "This research presents a hallucination-aware deepfake classifier using the FaceForensics++ dataset, extracting and processing faces with MTCNN and training models in PyTorch. The study introduces a novel hallucination divergence metric that reveals significant distribution shifts between real and synthetic data.",
+    "description": [
+      {
+        "_type": "block",
+        "_key": "desc-1",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-1-1",
+            "text": "Built a hallucination-aware deepfake classifier using the FaceForensics++ dataset, extracting and processing faces with MTCNN and training models in PyTorch."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "desc-2",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-2-1",
+            "text": "Achieved an overall accuracy of 92.3% on deepfake classification using a CNN-based model with advanced preprocessing techniques."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "desc-3",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-3-1",
+            "text": "Introduced a hallucination divergence metric that revealed a significant distribution shift between real and synthetic data, improving detection precision through comparative analysis."
+          }
+        ]
+      }
+    ],
+    "keyFindings": [
+      "92.3% accuracy on deepfake classification",
+      "Novel hallucination divergence metric",
+      "Significant distribution shift detection",
+      "0.87 Pearson correlation between hallucinated and deepfake outputs"
+    ],
+    "technologies": ["PyTorch", "MTCNN", "CNN", "FaceForensics++", "Computer Vision", "Deep Learning"],
+    "datasets": ["FaceForensics++"],
+    "metrics": ["92.3% classification accuracy", "Pearson correlation: 0.87"],
+    "featured": true,
+    "order": 1
+  },
+  {
+    "_type": "publication",
+    "_id": "publication-2",
+    "title": "Optimizing LSTM Hyperparameters with Genetic Algorithms",
+    "slug": {
+      "current": "optimizing-lstm-hyperparameters-genetic-algorithms"
+    },
+    "authors": ["Anshita Bhardwaj"],
+    "year": 2024,
+    "status": "not-published",
+    "abstract": "This study demonstrates the effectiveness of genetic algorithms in optimizing LSTM hyperparameters on the IMDB dataset, achieving superior performance compared to traditional optimization methods while reducing computational time.",
+    "description": [
+      {
+        "_type": "block",
+        "_key": "desc-1",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-1-1",
+            "text": "Tuned LSTM hyperparameters on the IMDB dataset using genetic algorithms (GA), achieving an AUC of 0.946 with optimized network architecture."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "desc-2",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-2-1",
+            "text": "Reduced model convergence time by 35% and demonstrated GA's superior balance of computational efficiency and model performance compared to grid search and random search methods."
+          }
+        ]
+      }
+    ],
+    "keyFindings": [
+      "AUC of 0.946 on IMDB sentiment analysis",
+      "35% reduction in convergence time",
+      "Superior efficiency compared to traditional methods",
+      "Optimal balance of performance and computational cost"
+    ],
+    "technologies": ["LSTM", "Genetic Algorithms", "Hyperparameter Optimization", "TensorFlow", "NLP"],
+    "datasets": ["IMDB Movie Reviews"],
+    "metrics": ["AUC: 0.946", "35% faster convergence"],
+    "featured": false,
+    "order": 2
+  },
+  {
+    "_type": "publication",
+    "_id": "publication-3",
+    "title": "Reimagining CAPTCHA Security: A Case for Retiring Alphanumeric Text-Based CAPTCHAs",
+    "slug": {
+      "current": "reimagining-captcha-security-retiring-alphanumeric"
+    },
+    "authors": ["Anshita Bhardwaj"],
+    "venue": "AIAMMS-2023",
+    "year": 2023,
+    "status": "published",
+    "abstract": "This paper proposes replacing outdated alphanumeric CAPTCHA systems with a CNN-based model using RetinaNet, demonstrating superior security and user experience through advanced computer vision techniques.",
+    "description": [
+      {
+        "_type": "block",
+        "_key": "desc-1",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-1-1",
+            "text": "Replaced outdated alphanumeric CAPTCHA systems with a CNN-based model using RetinaNet in Python, achieving 95% accuracy across a 50,000-image dataset."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "desc-2",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-2-1",
+            "text": "Boosted dataset efficiency by 40% through advanced preprocessing techniques, improving both security and user experience compared to traditional text-based CAPTCHAs."
+          }
+        ]
+      }
+    ],
+    "keyFindings": [
+      "95% accuracy on 50,000-image dataset",
+      "40% improvement in dataset efficiency",
+      "Superior security compared to text-based CAPTCHAs",
+      "Enhanced user experience with visual recognition"
+    ],
+    "technologies": ["CNN", "RetinaNet", "Computer Vision", "Python", "CAPTCHA Security"],
+    "datasets": ["50,000 CAPTCHA images"],
+    "metrics": ["95% classification accuracy", "40% efficiency improvement"],
+    "featured": false,
+    "order": 3
+  },
+  {
+    "_type": "publication",
+    "_id": "publication-4",
+    "title": "Modeling the Spread of COVID-19 in Lombardy: Adaptation of the SEIQRS Mathematical Framework",
+    "slug": {
+      "current": "modeling-covid19-spread-lombardy-seiqrs-framework"
+    },
+    "authors": ["Anshita Bhardwaj"],
+    "venue": "AIAMMS-2023",
+    "year": 2023,
+    "status": "published",
+    "abstract": "This study adapts the SEIQRS epidemiological model to forecast COVID-19 spread in Lombardy, Italy, integrating dynamic parameters like social distancing and testing rates for improved prediction accuracy.",
+    "description": [
+      {
+        "_type": "block",
+        "_key": "desc-1",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-1-1",
+            "text": "Adapted the SEIQRS epidemiological model to forecast COVID-19 spread, integrating dynamic parameters like social distancing and testing rates for comprehensive pandemic modeling."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "desc-2",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-2-1",
+            "text": "Enhanced prediction reliability using Profile Likelihood Fit, achieving a 30% accuracy boost compared to baseline epidemiological models."
+          }
+        ]
+      }
+    ],
+    "keyFindings": [
+      "30% accuracy improvement over baseline models",
+      "Integration of social distancing parameters",
+      "Dynamic testing rate adaptation",
+      "Improved pandemic forecasting reliability"
+    ],
+    "technologies": ["Mathematical Modeling", "SEIQRS Framework", "Profile Likelihood Fit", "Epidemiology", "Python"],
+    "datasets": ["COVID-19 Lombardy Data"],
+    "metrics": ["30% accuracy improvement", "Enhanced prediction reliability"],
+    "featured": false,
+    "order": 4
+  },
+  {
+    "_type": "publication",
+    "_id": "publication-5",
+    "title": "Unleashing the Power of LSTM Networks for Sentiment Analysis in Twitter",
+    "slug": {
+      "current": "lstm-networks-sentiment-analysis-twitter"
+    },
+    "authors": ["Anshita Bhardwaj"],
+    "venue": "AIAMMS-2023",
+    "year": 2023,
+    "status": "published",
+    "abstract": "This research applies LSTM networks with GloVe embeddings to a massive 2.5M tweet dataset, achieving superior sentiment classification performance compared to traditional machine learning approaches.",
+    "description": [
+      {
+        "_type": "block",
+        "_key": "desc-1",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-1-1",
+            "text": "Applied LSTM networks with GloVe embeddings to a 2.5M tweet dataset, achieving 91.02% validation accuracy through optimized preprocessing for sequential input."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "desc-2",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-2-1",
+            "text": "Outperformed baseline models like Naive Bayes and Decision Trees by over 20%, demonstrating improved classification precision through enhanced data cleaning and transformation techniques."
+          }
+        ]
+      }
+    ],
+    "keyFindings": [
+      "91.02% validation accuracy on 2.5M tweets",
+      "20% improvement over baseline models",
+      "Optimized preprocessing for sequential data",
+      "Enhanced classification precision"
+    ],
+    "technologies": ["LSTM", "GloVe Embeddings", "NLP", "TensorFlow", "Sentiment Analysis"],
+    "datasets": ["2.5M Twitter dataset"],
+    "metrics": ["91.02% validation accuracy", "20% improvement over baselines"],
+    "featured": true,
+    "order": 5
+  }
+]

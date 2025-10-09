@@ -1,0 +1,154 @@
+[
+  {
+    "_type": "experience",
+    "_id": "experience-1",
+    "company": "Arizona State University",
+    "position": "Research Assistant",
+    "location": "Tempe, AZ",
+    "startDate": "2024-09-01",
+    "endDate": null,
+    "isCurrent": true,
+    "description": [
+      {
+        "_type": "block",
+        "_key": "desc-1",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-1-1",
+            "text": "Orchestrated the successful extraction of a high-resolution dataset, compiling 1.5 million records across 28 years by scripting an automated Python solution to bypass CDC portal query limits."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "desc-2",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-2-1",
+            "text": "Enhanced a raw hazard dataset for feature engineering, increasing data granularity 200-fold by executing a data validation pipeline and performing root cause analysis."
+          }
+        ]
+      }
+    ],
+    "achievements": [
+      "Compiled 1.5 million records across 28 years",
+      "200-fold increase in data granularity",
+      "Automated Python solution for CDC portal",
+      "Data validation pipeline implementation"
+    ],
+    "skills": ["Python", "Data Extraction", "Data Cleaning", "Data Validation", "Root Cause Analysis", "Schema Design"],
+    "order": 0
+  },
+  {
+    "_type": "experience",
+    "_id": "experience-2",
+    "company": "Escorts Kubota Limited",
+    "position": "Data Analyst Intern",
+    "location": "Haryana, India",
+    "startDate": "2023-06-01",
+    "endDate": "2024-06-01",
+    "isCurrent": false,
+    "description": [
+      {
+        "_type": "block",
+        "_key": "desc-1",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-1-1",
+            "text": "Optimized production planning by 25%, reduced inventory costs by 10%, and improved on-time deliveries by 15% through advanced data analysis and forecasting models."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "desc-2",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-2-1",
+            "text": "Used LSTM models to forecast demand for 50+ products across 3 plants, enhancing resource allocation and supply chain efficiency."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "desc-3",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-3-1",
+            "text": "Improved predictive accuracy by 18% by integrating sales data with external economic factors, resulting in better demand forecasting and inventory management."
+          }
+        ]
+      }
+    ],
+    "achievements": [
+      "25% improvement in production planning",
+      "10% reduction in inventory costs",
+      "15% improvement in on-time deliveries",
+      "18% improvement in predictive accuracy",
+      "LSTM models for 50+ products across 3 plants"
+    ],
+    "skills": ["LSTM", "Time Series Analysis", "Demand Forecasting", "Supply Chain Analytics", "Production Planning", "Inventory Management"],
+    "order": 1
+  },
+  {
+    "_type": "experience",
+    "_id": "experience-3",
+    "company": "Justdial Ltd.",
+    "position": "Data Analyst Intern",
+    "location": "Maharashtra, India",
+    "startDate": "2022-06-01",
+    "endDate": "2022-08-01",
+    "isCurrent": false,
+    "description": [
+      {
+        "_type": "block",
+        "_key": "desc-1",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-1-1",
+            "text": "Developed a sentiment analysis tool using BERT and Transformers, achieving 92% classification accuracy across 10,000+ customer reviews."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "desc-2",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "desc-2-1",
+            "text": "Collaborated with engineering and marketing teams to implement keyword extraction using TF-IDF, leading to a 15% increase in keyword relevance."
+          }
+        ]
+      }
+    ],
+    "achievements": [
+      "92% classification accuracy on sentiment analysis",
+      "10,000+ customer reviews processed",
+      "15% increase in keyword relevance",
+      "BERT and Transformers implementation"
+    ],
+    "skills": ["BERT", "Transformers", "Sentiment Analysis", "TF-IDF", "NLP", "Customer Analytics", "Keyword Extraction"],
+    "order": 2
+  }
+]

@@ -1,0 +1,202 @@
+ANSHITA BHARDWAJ - DETAILED PROJECT INFORMATION
+
+PROJECT 1: LLM-POWERED AGENT FOR ENTERPRISE DOCUMENT INTELLIGENCE
+GitHub: https://github.com/Anshitaa/Document-intelligence-agent
+
+DESCRIPTION:
+This is a sophisticated RAG (Retrieval-Augmented Generation) system for enterprise document analysis. The agent can process PDF documents, create semantic embeddings, and answer questions based on document content using advanced AI models.
+
+KEY FEATURES:
+- Beautiful Web Interface: Modern, responsive Streamlit UI with real-time chat
+- PDF Document Processing: Automatically loads and processes PDF documents from a directory
+- Intelligent Chunking: Splits documents into optimal chunks for better processing
+- Free Embeddings: Uses HuggingFace sentence transformers for cost-effective semantic search
+- Persistent Storage: ChromaDB vector store for efficient document retrieval
+- OpenAI Integration: GPT-3.5-turbo for intelligent question answering
+- Interactive Chat: Both web and command-line interfaces
+- Real-time Analytics: Live statistics and document search
+- Batch Processing: Handles large document sets efficiently
+- Professional Architecture: Clean, modular, and well-documented code
+
+TECHNICAL IMPLEMENTATION:
+- Built with LangChain framework for RAG pipeline
+- Uses ChromaDB for vector storage and retrieval
+- Implements HuggingFace sentence-transformers for embeddings
+- OpenAI GPT-3.5-turbo for answer generation
+- Streamlit for web interface
+- Python-based with comprehensive error handling
+
+ACHIEVEMENTS:
+- 95% retrieval accuracy in document search
+- 75% reduction in answer-time compared to traditional search
+- Enterprise-grade scalability and reliability
+- Cost-effective design using free embeddings
+- Handles 100+ page documents efficiently
+
+PROJECT 2: RESPONSIBLE AI FOR HEALTHCARE RISK PREDICTION
+GitHub: https://github.com/Anshitaa/Responsible-AI-for-Predicting-Diabetic-Patient-Readmission
+
+DESCRIPTION:
+A predictive model and dashboard for patient readmission risk that focuses on transparency (XAI) and fairness (Bias Mitigation). This project demonstrates responsible AI practices in healthcare applications.
+
+KEY FEATURES:
+- Predictive Modeling: XGBoost model for readmission prediction
+- Explainability: SHAP integration for model interpretability
+- Bias Audit: Fairlearn integration for fairness analysis
+- Interactive Dashboard: Streamlit-based web application
+- Bias Mitigation: Fairlearn algorithms for reducing demographic bias
+
+TECHNICAL IMPLEMENTATION:
+- XGBoost for predictive modeling
+- SHAP for explainable AI and feature importance
+- Fairlearn for bias detection and mitigation
+- Scikit-learn for data preprocessing
+- Streamlit for interactive dashboard
+- Python-based with comprehensive analysis
+
+ACHIEVEMENTS:
+- 40% reduction in demographic bias while maintaining performance
+- 98% of baseline model accuracy maintained
+- Improved clinical trust through explainable predictions
+- Comprehensive bias audit and mitigation pipeline
+- Interactive dashboard for healthcare professionals
+
+PROJECT 3: END-TO-END MLOPS PIPELINE FOR REAL-TIME ANOMALY DETECTION
+GitHub: https://github.com/Anshitaa/End-to-End-MLOps-Pipeline-for-Real-Time-Anomaly-Detection
+
+DESCRIPTION:
+A production-grade MLOps pipeline for real-time anomaly detection using Kafka for streaming, Spark for processing, and Kubernetes for deployment. Demonstrates enterprise-level MLOps practices.
+
+KEY FEATURES:
+- High-throughput streaming data pipeline
+- Real-time anomaly detection and alerting
+- Automated scaling and fault tolerance
+- Containerized deployment with Kubernetes
+- Comprehensive monitoring and logging
+- Production-ready architecture
+
+TECHNICAL IMPLEMENTATION:
+- Apache Kafka for real-time data streaming
+- Apache Spark for distributed processing
+- Kubernetes for container orchestration
+- Docker for containerization
+- Python for ML models and data processing
+- Comprehensive monitoring and alerting
+
+ACHIEVEMENTS:
+- Processes 10,000+ events per minute
+- Sub-second latency for real-time detection
+- Automated scaling based on load
+- High availability and fault tolerance
+- Production-grade deployment pipeline
+
+PROJECT 4: FULL-STACK LLM AGENT WITH DYNAMIC KNOWLEDGE BASE
+GitHub: https://github.com/Anshitaa/Full-Stack-LLM-Agent-with-a-Dynamic-Knowledge-Base
+
+DESCRIPTION:
+A user-facing, full-stack AI application featuring a React frontend and a FastAPI backend, allowing users to both chat with an agent and dynamically update its knowledge base via document uploads.
+
+KEY FEATURES:
+- React frontend with modern UI/UX
+- FastAPI backend with high performance
+- Dynamic knowledge base updates
+- Real-time document processing
+- Vector database integration
+- User authentication and management
+- RESTful API design
+
+TECHNICAL IMPLEMENTATION:
+- React.js for frontend development
+- FastAPI for backend API
+- LangChain for LLM integration
+- Vector database for knowledge storage
+- Docker for containerization
+- AWS for deployment and scaling
+- RESTful API architecture
+
+ACHIEVEMENTS:
+- Sub-200ms API response time
+- Real-time knowledge base expansion
+- Seamless frontend-backend integration
+- Scalable architecture for production use
+- Dynamic document processing capabilities
+
+PROJECT 5: OS SCHEDULER PRO: VISUAL PROCESS MANAGEMENT
+GitHub: https://github.com/Anshitaa/OS-Scheduler-Pro-Visual-Process-Management
+
+DESCRIPTION:
+A Python-based desktop simulator using Tkinter and Matplotlib to visualize core OS scheduling algorithms like FCFS, SJF, and Round Robin. Educational tool for understanding operating system concepts.
+
+KEY FEATURES:
+- Visual process scheduling simulation
+- Multiple scheduling algorithms (FCFS, SJF, Priority, Round Robin)
+- Real-time Gantt chart visualization
+- Process management interface
+- Performance metrics and analysis
+- Educational and interactive design
+
+TECHNICAL IMPLEMENTATION:
+- Python for core logic
+- Tkinter for GUI interface
+- Matplotlib for data visualization
+- Algorithm implementation for scheduling
+- Performance metrics calculation
+- Interactive user interface
+
+ACHIEVEMENTS:
+- Handles up to 1,000 processes efficiently
+- 20% reduction in average waiting time
+- Real-time visualization of scheduling
+- Educational value for OS concepts
+- Comprehensive algorithm comparison
+
+PROJECT 6: SENTIMENT ANALYSIS IN TWITTER USING LSTM NETWORKS
+GitHub: https://github.com/Anshitaa/Sentiment-Analysis
+
+DESCRIPTION:
+Applied LSTM networks with GloVe embeddings to a 2.5M tweet dataset, achieving high accuracy in sentiment classification. Demonstrates advanced NLP techniques and deep learning applications.
+
+KEY FEATURES:
+- LSTM neural networks for sequence modeling
+- GloVe word embeddings for text representation
+- Large-scale dataset processing (2.5M tweets)
+- Advanced text preprocessing
+- Performance comparison with baseline models
+- Comprehensive evaluation metrics
+
+TECHNICAL IMPLEMENTATION:
+- TensorFlow/Keras for neural network implementation
+- GloVe embeddings for word representation
+- LSTM architecture for sequence learning
+- Advanced text preprocessing pipeline
+- Performance evaluation and comparison
+- Python-based implementation
+
+ACHIEVEMENTS:
+- 91.02% validation accuracy on sentiment classification
+- Processed 2.5M tweet dataset efficiently
+- 20% improvement over baseline models (Naive Bayes, Decision Trees)
+- Advanced preprocessing optimization
+- Comprehensive performance evaluation
+
+RESEARCH METHODOLOGY:
+All projects follow rigorous research and development methodologies:
+- Literature review and state-of-the-art analysis
+- Experimental design and hypothesis formulation
+- Data collection and preprocessing
+- Model development and optimization
+- Comprehensive evaluation and validation
+- Performance benchmarking and comparison
+- Documentation and reproducibility
+
+TECHNICAL EXPERTISE DEMONSTRATED:
+- Full-stack development (Frontend, Backend, DevOps)
+- Machine Learning and Deep Learning
+- Natural Language Processing
+- Computer Vision
+- MLOps and Production Deployment
+- Data Engineering and Pipeline Development
+- Explainable AI and Responsible AI
+- Real-time Systems and Streaming
+- Cloud Computing and Containerization
+- Algorithm Design and Optimization

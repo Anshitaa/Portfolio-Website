@@ -1,0 +1,55 @@
+[
+  {
+    "_type": "education",
+    "_id": "education-1",
+    "institution": "Arizona State University",
+    "degree": "Master of Science in Data Science, Analytics and Engineering",
+    "field": "Data Science, Analytics and Engineering",
+    "location": "Tempe, AZ",
+    "startDate": "2024-08-01",
+    "endDate": "2026-05-01",
+    "isCurrent": true,
+    "description": "Graduate program focusing on advanced data science methodologies, machine learning, and analytics engineering with emphasis on explainable AI and responsible AI practices.",
+    "relevantCoursework": [
+      "Machine Learning and Data Mining",
+      "Statistical Methods for Data Science",
+      "Big Data Analytics",
+      "Data Engineering and MLOps",
+      "Explainable AI and Interpretable Models",
+      "Deep Learning and Neural Networks"
+    ],
+    "achievements": [
+      "Research Assistant in AI/ML Lab",
+      "Focus on Explainable AI and Healthcare Applications",
+      "Active in AI Ethics and Responsible AI Research"
+    ],
+    "order": 0
+  },
+  {
+    "_type": "education",
+    "_id": "education-2",
+    "institution": "Amity University",
+    "degree": "Bachelor of Technology in Computer Science and Engineering",
+    "field": "Computer Science and Engineering",
+    "location": "Rajasthan, India",
+    "startDate": "2020-08-01",
+    "endDate": "2024-05-01",
+    "isCurrent": false,
+    "description": "Undergraduate program covering fundamental computer science concepts, software engineering, and specialized courses in artificial intelligence and machine learning.",
+    "relevantCoursework": [
+      "Data Structures and Algorithms",
+      "Machine Learning",
+      "Artificial Intelligence",
+      "Database Management Systems",
+      "Software Engineering",
+      "Computer Networks",
+      "Operating Systems"
+    ],
+    "achievements": [
+      "Published multiple research papers in AI conferences",
+      "Active participation in technical competitions",
+      "Strong foundation in programming and software development"
+    ],
+    "order": 1
+  }
+]

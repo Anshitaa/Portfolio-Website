@@ -1,0 +1,168 @@
+ANSHITA BHARDWAJ - RESUME SUMMARY
+
+CONTACT INFORMATION:
+Email: anshita.inbox@gmail.com
+Phone: +1 (480) 765-3612
+LinkedIn: https://www.linkedin.com/in/anshita--bhardwaj
+Location: Tempe, AZ
+
+PROFESSIONAL SUMMARY:
+Data Science graduate student with research experience in deep learning and NLP. Skilled in building end-to-end data pipelines, from extracting and validating large-scale datasets of over 1.5 million records to developing predictive models using LSTMs and Transformers. Proficient in creating high-impact AI models across natural language and time-series domains using tools like TensorFlow and PyTorch.
+
+EDUCATION:
+- Arizona State University, Tempe, AZ
+  Master of Science in Data Science, Analytics and Engineering (Expected May 2026)
+  Currently enrolled, focusing on Explainable AI and Healthcare Applications
+
+- Amity University, Rajasthan, India
+  Bachelor of Technology in Computer Science and Engineering (May 2024)
+
+TECHNICAL SKILLS:
+
+Programming Languages:
+- Python (Expert, 4+ years)
+- JavaScript, HTML, CSS
+- C/C++
+- SAS
+
+AI/ML Frameworks & Libraries:
+- TensorFlow (Advanced, 3+ years)
+- PyTorch (Advanced, 2+ years)
+- Scikit-learn (Advanced, 3+ years)
+- LangChain (Advanced, 2+ years)
+- Hugging Face Transformers
+- OpenCV
+- SHAP (Explainable AI)
+- Fairlearn (Responsible AI)
+
+Databases:
+- PostgreSQL (Advanced, 3+ years)
+- MongoDB (Intermediate, 2+ years)
+- MySQL
+- SQL Server Management Studio
+- SQLite
+
+Tools & Software:
+- AWS (Intermediate, 2+ years)
+- Docker (Intermediate, 2+ years)
+- Kubernetes (Intermediate, 1+ years)
+- Apache Spark (Intermediate, 1+ years)
+- Kafka
+- Tableau (Intermediate, 2+ years)
+- Power BI
+- Git (Advanced, 4+ years)
+- Jupyter Notebook
+- VS Code
+
+Frontend Development:
+- React (Intermediate, 2+ years)
+- NextJS
+- Django
+
+WORK EXPERIENCE:
+
+1. Research Assistant | Arizona State University | Tempe, AZ (Sept 2024 – Present)
+   - Orchestrated successful extraction of high-resolution dataset, compiling 1.5 million records across 28 years
+   - Scripted automated Python solution to bypass CDC portal query limits
+   - Enhanced raw hazard dataset for feature engineering, increasing data granularity 200-fold
+   - Executed data validation pipeline and performed root cause analysis
+   - Skills: Python, Data Extraction, Data Cleaning, Data Validation, Root Cause Analysis, Schema Design
+
+2. Data Analyst Intern | Escorts Kubota Limited | Haryana, India (June 2023-June 2024)
+   - Optimized production planning by 25%, reduced inventory costs by 10%, improved on-time deliveries by 15%
+   - Used LSTM models to forecast demand for 50+ products across 3 plants
+   - Improved predictive accuracy by 18% by integrating sales data with external economic factors
+   - Skills: LSTM, Time Series Analysis, Demand Forecasting, Supply Chain Analytics, Production Planning
+
+3. Data Analyst Intern | Justdial Ltd. | Maharashtra, India (June 2022-August 2022)
+   - Developed sentiment analysis tool using BERT and Transformers, achieving 92% classification accuracy
+   - Processed 10,000+ customer reviews
+   - Implemented keyword extraction using TF-IDF, leading to 15% increase in keyword relevance
+   - Skills: BERT, Transformers, Sentiment Analysis, TF-IDF, NLP, Customer Analytics
+
+KEY PROJECTS:
+
+1. LLM-Powered Agent for Enterprise Document Intelligence
+   - Built enterprise-grade RAG pipeline with LangChain and ChromaDB
+   - Achieved 95% retrieval accuracy and 75% reduction in answer-time
+   - Tech Stack: LLMs, RAG, LangChain, Vector Databases, Python, Streamlit
+   - GitHub: https://github.com/Anshitaa/Document-intelligence-agent
+
+2. Responsible AI for Healthcare Risk Prediction
+   - Developed predictive model with SHAP-based explainability dashboard
+   - Reduced demographic bias by 40% while maintaining 98% baseline accuracy
+   - Tech Stack: XAI, SHAP, Fairlearn, Scikit-learn, Python, Streamlit
+   - GitHub: https://github.com/Anshitaa/Responsible-AI-for-Predicting-Diabetic-Patient-Readmission
+
+3. End-to-End MLOps Pipeline for Real-Time Anomaly Detection
+   - Built high-throughput streaming pipeline processing 10,000+ events per minute
+   - Achieved sub-second latency using Kafka and Apache Spark
+   - Deployed on Kubernetes for automated scaling and fault tolerance
+   - Tech Stack: MLOps, Apache Spark, Kafka, Kubernetes, Docker, Python
+
+4. Full-Stack LLM Agent with Dynamic Knowledge Base
+   - Architected full-stack AI application with React frontend and FastAPI backend
+   - Achieved sub-200ms API response time
+   - Enabled real-time knowledge base expansion via document uploads
+   - Tech Stack: React, FastAPI, LLMs, RAG, LangChain, Docker, AWS
+
+5. OS Scheduler Pro: Visual Process Management
+   - Developed Python-based process scheduling simulator with Tkinter and Matplotlib
+   - Visualized algorithms: FCFS, SJF, Priority, Round Robin
+   - Handled up to 1,000 processes with real-time Gantt chart visualization
+   - Tech Stack: Python, Tkinter, Matplotlib, Algorithms, Data Visualization
+
+6. Sentiment Analysis in Twitter using LSTM Networks
+   - Applied LSTM networks with GloVe embeddings to 2.5M tweet dataset
+   - Achieved 91.02% validation accuracy
+   - Outperformed baseline models by over 20%
+   - Tech Stack: NLP, LSTM, Deep Learning, Python, GloVe, TensorFlow
+
+RESEARCH PUBLICATIONS:
+
+1. "Artificial Intelligence Hallucinations Fueling Deepfake Threats: Detection and Prevention Approaches" (Not yet published)
+   - Built hallucination-aware deepfake classifier using FaceForensics++ dataset
+   - Achieved 92.3% accuracy on deepfake classification using CNN-based model
+   - Introduced hallucination divergence metric revealing significant distribution shifts
+   - Technologies: PyTorch, MTCNN, CNN, Computer Vision
+
+2. "Optimizing LSTM Hyperparameters with Genetic Algorithms" (Not yet published)
+   - Tuned LSTM hyperparameters on IMDB dataset using genetic algorithms
+   - Achieved AUC of 0.946
+   - Reduced model convergence time by 35%
+   - Technologies: LSTM, Genetic Algorithms, TensorFlow, NLP
+
+3. "Reimagining CAPTCHA Security: A Case for Retiring Alphanumeric Text-Based CAPTCHAs" (AIAMMS-2023)
+   - Replaced alphanumeric CAPTCHA systems with CNN-based model using RetinaNet
+   - Achieved 95% accuracy across 50,000-image dataset
+   - Boosted dataset efficiency by 40% through advanced preprocessing
+   - Technologies: CNN, RetinaNet, Python, Computer Vision
+
+4. "Modeling the Spread of COVID-19 in Lombardy: Adaptation of the SEIQRS Mathematical Framework" (AIAMMS-2023)
+   - Adapted SEIQRS epidemiological model for COVID-19 spread forecasting
+   - Integrated dynamic parameters like social distancing and testing rates
+   - Enhanced prediction reliability using Profile Likelihood Fit
+   - Achieved 30% accuracy boost over baseline models
+   - Technologies: Mathematical Modeling, SEIQRS Framework, Epidemiology, Python
+
+5. "Unleashing the Power of LSTM Networks for Sentiment Analysis in Twitter" (AIAMMS-2023)
+   - Applied LSTM networks with GloVe embeddings to 2.5M tweet dataset
+   - Achieved 91.02% validation accuracy
+   - Outperformed baseline models by over 20%
+   - Technologies: LSTM, GloVe Embeddings, TensorFlow, NLP
+
+RESEARCH INTERESTS:
+- Explainable AI (XAI) and Model Interpretability
+- Responsible AI and Bias Mitigation
+- Healthcare AI Applications
+- Natural Language Processing
+- Computer Vision and Deep Learning
+- MLOps and Production AI Systems
+- Time Series Analysis and Forecasting
+
+ACHIEVEMENTS:
+- Published 5 research papers in AI conferences
+- Multiple industry internships with quantifiable impact
+- Expertise in both research and industry applications
+- Strong foundation in full-stack development and AI/ML
+- Focus on creating transparent, fair, and responsible AI systems

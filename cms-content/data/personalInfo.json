@@ -1,0 +1,53 @@
+{
+  "_type": "personalInfo",
+  "_id": "personal-info",
+  "name": "Anshita Bhardwaj",
+  "title": "M.S. Data Science @ ASU | Specializing in Explainable AI",
+  "email": "anshita.inbox@gmail.com",
+  "phone": "+1 (480) 765-3612",
+  "linkedin": "https://www.linkedin.com/in/anshita--bhardwaj",
+  "github": "https://github.com/Anshitaa",
+  "location": "Tempe, AZ",
+  "summary": "Data Science graduate student with research experience in deep learning and NLP. Skilled in building end-to-end data pipelines, from extracting and validating large-scale datasets of over 1.5 million records to developing predictive models using LSTMs and Transformers.",
+  "bio": [
+    {
+      "_type": "block",
+      "_key": "bio-1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "bio-1-1",
+          "text": "I am a passionate Data Science graduate student at Arizona State University, specializing in Explainable AI and machine learning applications in healthcare. My research focuses on building transparent, fair, and responsible AI systems that can be trusted in critical decision-making scenarios."
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "bio-2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "bio-2-1",
+          "text": "With hands-on experience in both industry and research settings, I have developed expertise in end-to-end data pipelines, from extracting and validating large-scale datasets to deploying production-ready AI models. My work spans across natural language processing, computer vision, and time-series analysis."
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "bio-3",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "bio-3-1",
+          "text": "I am particularly interested in the intersection of AI and healthcare, where I have worked on projects involving diabetic patient readmission prediction, COVID-19 spread modeling, and deepfake detection. My goal is to create AI systems that are not only accurate but also explainable, fair, and beneficial to society."
+        }
+      ]
+    }
+  ]
+}
