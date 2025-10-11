@@ -9,6 +9,7 @@ import { education } from './schemas/education'
 import { personalInfo } from './schemas/personalInfo'
 import { skill } from './schemas/skill'
 import { publication } from './schemas/publication'
+import message from './schemas/message'
 
 export default defineConfig({
   name: 'anshita-portfolio',
@@ -46,6 +47,10 @@ export default defineConfig({
             S.listItem()
               .title('Publications')
               .child(S.documentTypeList('publication').title('Research Publications')),
+            S.divider(),
+            S.listItem()
+              .title('Contact Messages')
+              .child(S.documentTypeList('message').title('Contact Form Messages')),
           ])
     }),
     visionTool(),
@@ -59,6 +64,7 @@ export default defineConfig({
       education,
       skill,
       publication,
+      message,
     ],
   },
 })
