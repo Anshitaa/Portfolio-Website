@@ -1,5 +1,5 @@
 import { sanityClient } from '@/lib/sanity.client';
-import { personalInfoQuery, projectsQuery, experienceQuery, publicationsQuery } from '@/lib/queries';
+import { personalInfoQuery, experienceQuery, publicationsQuery } from '@/lib/queries';
 import Image from 'next/image';
 import NavBar from './components/NavBar';
 import TypingAnimation from './components/TypingAnimation';
@@ -7,16 +7,6 @@ import ScrollAnimation from './components/ScrollAnimation';
 import ContactForm from './components/ContactForm';
 
 // ─── Type Definitions ────────────────────────────────────────────────────────
-
-interface Project {
-  _id: string;
-  title: string;
-  summary: string;
-  techStack?: string[];
-  githubUrl?: string;
-  liveDemoUrl?: string;
-  featured?: boolean;
-}
 
 interface Experience {
   company: string;
@@ -66,13 +56,12 @@ function getPublicationLink(pub: Publication): string | null {
 // ─── Data Fetching ────────────────────────────────────────────────────────────
 
 async function getData() {
-  const [personalInfo, projects, experience, publications] = await Promise.all([
+  const [personalInfo, experience, publications] = await Promise.all([
     sanityClient.fetch(personalInfoQuery),
-    sanityClient.fetch(projectsQuery),
     sanityClient.fetch(experienceQuery),
     sanityClient.fetch(publicationsQuery),
   ]);
-  return { personalInfo, projects, experience, publications };
+  return { personalInfo, experience, publications };
 }
 
 // ─── Skill categories (static, curated) ──────────────────────────────────────
@@ -256,7 +245,7 @@ const EXPERIENCE_SKILLS: Record<string, string[]> = {
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default async function Home() {
-  const { personalInfo, projects, experience, publications } = await getData();
+  const { personalInfo, experience, publications } = await getData();
 
   const heroRoles = [
     'M.S. Data Science @ ASU',
