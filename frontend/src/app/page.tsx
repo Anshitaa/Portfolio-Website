@@ -214,6 +214,14 @@ const GITHUB_PROJECTS = [
     githubUrl: 'https://github.com/Anshitaa/Tiktok-ETL-Project',
     featured: false,
   },
+  {
+    title: 'Docu-Sync — AI-Powered Documentation Automation',
+    description:
+      'Watches UI changes between screenshots, runs a 4-stage pipeline (SSIM + Gemini Vision detection → RAG retrieval → structured doc generation → GitHub PR) and automatically opens a pull request with updated README documentation. Confidence-scored output with eval suite across 11 dimensions.',
+    techStack: ['Python', 'Flask', 'Google Gemini', 'OpenCV', 'SSIM', 'RAG', 'PyGithub', 'Docker'],
+    githubUrl: 'https://github.com/Anshitaa/Document-Sync',
+    featured: false,
+  },
 ];
 
 // Recruiter-friendly descriptions drawn directly from resume
@@ -333,7 +341,7 @@ export default async function Home() {
                   LinkedIn
                 </a>
                 <a
-                  href="https://drive.google.com/file/d/1CEeqCaLKfgnpCptHEH1NYL8wuPFkm-wh/view?usp=sharing"
+                  href="/resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-2.5 border border-purple-200 text-purple-600 hover:bg-purple-50 text-sm font-medium rounded-xl transition-colors duration-200"
