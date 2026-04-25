@@ -9,90 +9,70 @@ export default defineType({
       name: 'name',
       title: 'Name',
       type: 'string',
-      validation: Rule => Rule.required().min(2).max(100)
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'email',
       title: 'Email',
       type: 'string',
-      validation: Rule => Rule.required().email()
+      validation: Rule => Rule.email().required(),
     }),
     defineField({
       name: 'subject',
       title: 'Subject',
       type: 'string',
-      validation: Rule => Rule.required().min(5).max(200)
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'message',
       title: 'Message',
       type: 'text',
-      validation: Rule => Rule.required().min(10).max(2000)
+      rows: 5,
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'receivedAt',
       title: 'Received At',
       type: 'datetime',
-      initialValue: () => new Date().toISOString(),
-      readOnly: true
+      options: {
+        dateFormat: 'YYYY-MM-DD',
+        timeFormat: 'HH:mm',
+        calendarTodayLabel: 'Today'
+      },
+      readOnly: true,
     }),
     defineField({
       name: 'isRead',
-      title: 'Read Status',
+      title: 'Is Read',
       type: 'boolean',
       initialValue: false,
-      description: 'Mark as read when you have reviewed this message'
     }),
     defineField({
       name: 'ipAddress',
       title: 'IP Address',
       type: 'string',
-      description: 'For spam protection and analytics'
+      readOnly: true,
     }),
     defineField({
       name: 'userAgent',
       title: 'User Agent',
-      type: 'text',
-      description: 'Browser/device information'
-    })
+      type: 'string',
+      readOnly: true,
+    }),
   ],
   preview: {
     select: {
-      title: 'name',
-      subtitle: 'email',
-      media: 'email'
+      title: 'subject',
+      subtitle: 'name',
+      media: 'receivedAt',
     },
     prepare(selection) {
-      const { title, subtitle } = selection
+      const { title, subtitle, media } = selection
       return {
         title: title,
-        subtitle: `${subtitle} - ${new Date().toLocaleDateString()}`,
-        media: '📧'
+        subtitle: `${subtitle} - ${new Date(media).toLocaleDateString()}`,
       }
-    }
+    },
   },
-  orderings: [
-    {
-      title: 'Date (Newest)',
-      name: 'dateDesc',
-      by: [
-        { field: 'receivedAt', direction: 'desc' }
-      ]
-    },
-    {
-      title: 'Date (Oldest)',
-      name: 'dateAsc',
-      by: [
-        { field: 'receivedAt', direction: 'asc' }
-      ]
-    },
-    {
-      title: 'Unread First',
-      name: 'unreadFirst',
-      by: [
-        { field: 'isRead', direction: 'asc' },
-        { field: 'receivedAt', direction: 'desc' }
-      ]
-    }
-  ]
 })
+
