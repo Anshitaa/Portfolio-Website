@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { sanityClient } from '@/lib/sanity.client'
 
 export async function POST(request: NextRequest) {
   try {
@@ -13,21 +14,27 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Here you would typically:
-    // 1. Send an email using a service like SendGrid, Resend, or Nodemailer
-    // 2. Save to a database
-    // 3. Send to a webhook service like Zapier
-    
-    // For now, we'll just log the contact form submission
-    console.log('Contact Form Submission:', {
-      name,
-      email,
-      subject,
-      message,
-      timestamp: new Date().toISOString()
+    // Get client IP and user agent for analytics
+    const forwarded = request.headers.get('x-forwarded-for')
+    const ipAddress = forwarded ? forwarded.split(',')[0] : 'unknown'
+    const userAgent = request.headers.get('user-agent') || 'unknown'
+
+    // Save message to Sanity CMS
+    const messageDoc = await sanityClient.create({
+      _type: 'message',
+      name: name.trim(),
+      email: email.trim().toLowerCase(),
+      subject: subject.trim(),
+      message: message.trim(),
+      receivedAt: new Date().toISOString(),
+      isRead: false,
+      ipAddress: ipAddress,
+      userAgent: userAgent
     })
 
-    // You can integrate with email services here:
+    console.log('Contact message saved to Sanity:', messageDoc._id)
+
+    // You can also integrate with email services here:
     // Example with SendGrid:
     // await sgMail.send({
     //   to: 'anshita.inbox@gmail.com',
@@ -44,7 +51,7 @@ export async function POST(request: NextRequest) {
     // })
 
     return NextResponse.json(
-      { message: 'Message sent successfully!' },
+      { message: 'Message sent successfully!', messageId: messageDoc._id },
       { status: 200 }
     )
   } catch (error) {

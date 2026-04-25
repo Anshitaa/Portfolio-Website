@@ -26,7 +26,7 @@ Congratulations! The Sanity.io CMS setup is complete with all your content schem
 ```bash
 # Visit https://sanity.io and create an account
 # Create a new project and note your:
-# - Project ID
+# - Project ID j6an4il7
 # - Dataset name (usually "production")
 ```
 
@@ -45,8 +45,8 @@ cp env.example .env
 ./scripts/setup.sh
 
 # Or manually:
-npm install
-node scripts/import-data.js
+
+
 ```
 
 ### 4. Start Sanity Studio

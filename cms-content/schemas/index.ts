@@ -15,3 +15,5 @@ export const schemaTypes = [
   publication,
   message
 ]
+
+
