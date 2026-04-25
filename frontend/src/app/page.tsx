@@ -265,8 +265,6 @@ export default async function Home() {
     'Data Scientist',
   ];
 
-  const featuredProjects: Project[] = (projects ?? []).filter((p: Project) => p.featured);
-  const otherProjects: Project[] = (projects ?? []).filter((p: Project) => !p.featured);
 
   return (
     <div className="min-h-screen bg-white text-gray-900 antialiased">
