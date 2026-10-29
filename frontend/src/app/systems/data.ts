@@ -39,6 +39,7 @@ export interface GalleryImage {
   w: number;
   h: number;
   caption: string;
+  wide?: boolean; // span the full gallery width
 }
 
 export interface System {
@@ -78,7 +79,7 @@ export const BUILD_LOOP = [
   {
     step: 'AI-assisted build',
     detail:
-      'Claude Code and Cursor write first drafts of modules, DAGs and tests. I decide the boundaries — schemas, service splits, what gets a queue — and the model fills them in.',
+      'Claude Code and Cursor write first drafts of modules, DAGs and tests. I decide the boundaries: schemas, service splits and what gets a queue. The model fills them in.',
     evidence: 'ADRs written by me, implementation paired with AI',
   },
   {
@@ -102,7 +103,7 @@ export const BUILD_LOOP = [
   {
     step: 'Human in the loop',
     detail:
-      'A person approves the PR, overrides the risk score, or reviews the flagged case — and that decision is logged and fed back into the next model.',
+      'A person approves the PR, overrides the risk score, or reviews the flagged case. That decision is logged and fed back into the next model.',
     evidence: 'audit.hitl_overrides → active-learning retrain at ≥ 50 labels',
   },
 ];
@@ -117,18 +118,18 @@ export const SYSTEMS: System[] = [
     repo: 'https://github.com/Anshitaa/TalentLens',
     promptingWouldBe: 'Paste an employee table into a chat window and ask "who is likely to quit?"',
     thisDoes:
-      'Streams 2M+ HR events into a 4-schema warehouse, scores every employee with an explainable model, audits it for bias and drift, and lets a ReAct agent answer questions using live SQL and policy retrieval — while every human override is logged and retrains the model.',
+      'Streams 2M+ HR events into a 4-schema warehouse, scores every employee with an explainable model, audits it for bias and drift, and lets a ReAct agent answer questions using live SQL and policy retrieval. Every human override is logged and feeds the next retrain.',
     nodes: [
       {
         id: 'gen', label: 'Synthetic HRIS', tech: 'Python generator', layer: 'data',
         what: '85K employees and 2M+ HR events across 24 months, generated rather than downloaded.',
-        why: 'A Kaggle CSV shows you can load data. Generating the event stream shows you can design one — and it gives the pipeline realistic volume to break on.',
+        why: 'A Kaggle CSV shows you can load data. Generating the event stream shows you can design one, and it gives the pipeline realistic volume to break on.',
         emits: 'generated 85,000 employees · 2M+ events · 24 months',
       },
       {
         id: 'stream', label: 'Kafka + Airflow', tech: '4 topics · 5 DAGs', layer: 'infra',
         what: 'Idempotent producer into 4 Kafka topics with 3 consumer groups; Airflow runs ingestion, features, scoring, drift and HITL DAGs.',
-        why: 'ADR-001: Kafka over direct DB writes — fan-out to three consumers, replay on failure, and producers that do not know who reads them.',
+        why: 'ADR-001: Kafka over direct DB writes. It gives fan-out to three consumers, replay on failure, and producers that do not need to know who reads them.',
         tradeoff: 'More moving parts than a cron job; justified only because three consumers need the same events.',
         emits: 'employee-events → risk-scores · audit-log · dashboard-feed',
       },
@@ -146,32 +147,32 @@ export const SYSTEMS: System[] = [
       },
       {
         id: 'score', label: 'Risk scoring', tech: 'XGBoost + Isolation Forest + SHAP', layer: 'model',
-        what: 'Flight-risk classifier plus anomaly detector combined into a 0–100 Composite Risk Index, with the top 3 SHAP drivers attached to every score.',
-        why: 'ADR-002: gradient boosting over neural nets — tabular HR data, and HR decisions need an explanation per person.',
-        emits: 'risk_index 0–100 + top-3 SHAP features per employee',
+        what: 'Flight-risk classifier plus anomaly detector combined into a 0-100 Composite Risk Index, with the top 3 SHAP drivers attached to every score.',
+        why: 'ADR-002: gradient boosting over neural nets. The data is tabular, and every HR decision needs an explanation for the person it affects.',
+        emits: 'risk_index 0-100 + top-3 SHAP features per employee',
       },
       {
         id: 'gov', label: 'Governance', tech: 'MLflow · Fairlearn · PSI · Optuna', layer: 'eval',
         what: 'Every run tracked in MLflow; Fairlearn bias audit; PSI drift monitor with a 0.10 watch threshold and 0.20 retrain trigger.',
         why: 'A model that was fair and accurate at training time is not guaranteed to stay so. Drift has to be measured, not assumed.',
-        emits: 'PSI < 0.10 ok · 0.10–0.20 monitor · > 0.20 retrain',
+        emits: 'PSI < 0.10 ok · 0.10-0.20 monitor · > 0.20 retrain',
       },
       {
         id: 'hitl', label: 'Human-in-the-loop', tech: 'Active learning', layer: 'human',
-        what: 'Employees in the 0.35–0.65 uncertainty band are sampled for review; overrides go to audit.hitl_overrides; ≥ 50 new labels triggers an Optuna retrain. 180 overrides seeded.',
+        what: 'Employees in the 0.35-0.65 uncertainty band are sampled for review; overrides go to audit.hitl_overrides; ≥ 50 new labels triggers an Optuna retrain. 180 overrides seeded.',
         why: 'The model asks for help exactly where it is least sure, and the reviewer’s answer becomes training data instead of a lost Slack message.',
         emits: '200 uncertain cases queued · override logged · retrain at ≥ 50 labels',
       },
       {
         id: 'agent', label: 'ReAct agent', tech: 'LangGraph · FAISS RAG', layer: 'agent',
-        what: 'Agent with 4 tools — query_risk_db, search_hr_policy, flag_for_review, generate_report. Policy RAG: 28 chunks, 384-dim all-MiniLM-L6-v2. Provider-agnostic: Gemini, Claude, GPT-4o or Ollama.',
-        why: 'ADR-003: the RAG service is separate so 1–10s LLM latency never blocks sub-100ms risk scoring. flag_for_review means the agent escalates to a human rather than acting.',
+        what: 'Agent with 4 tools: query_risk_db, search_hr_policy, flag_for_review and generate_report. Policy RAG: 28 chunks, 384-dim all-MiniLM-L6-v2. Provider-agnostic: Gemini, Claude, GPT-4o or Ollama.',
+        why: 'ADR-003: the RAG service is separate so 1-10s LLM latency never blocks sub-100ms risk scoring. flag_for_review means the agent escalates to a human rather than acting.',
         emits: 'tool: query_risk_db → search_hr_policy → flag_for_review',
       },
       {
         id: 'serve', label: 'API + dashboard', tech: 'FastAPI · React · K8s', layer: 'infra',
         what: '22 FastAPI routes with JWT and a WebSocket feed; 5-page React dashboard; 7 Docker services; Kubernetes manifests with KEDA autoscaling.',
-        why: 'ADR-004: autoscale on Kafka consumer lag, not CPU — lag is a leading indicator, CPU a lagging one.',
+        why: 'ADR-004: autoscale on Kafka consumer lag, not CPU. Lag is a leading indicator; CPU is a lagging one.',
         tradeoff: 'Runs on minikube. EKS is architected, not claimed.',
         emits: '22 routes · WebSocket live feed · KEDA scales on lag',
       },
@@ -187,7 +188,7 @@ export const SYSTEMS: System[] = [
     decisions: [
       { id: 'ADR-001', decision: 'Kafka over direct DB writes', rationale: 'Fan-out to 3 consumers, replay on failure, decoupling.' },
       { id: 'ADR-002', decision: 'XGBoost over neural nets', rationale: 'Tabular data, and SHAP explanations are required for HR compliance.' },
-      { id: 'ADR-003', decision: 'Separate RAG microservice', rationale: 'LLM latency (1–10s) must not block risk scoring (< 100ms).' },
+      { id: 'ADR-003', decision: 'Separate RAG microservice', rationale: 'LLM latency (1-10s) must not block risk scoring (< 100ms).' },
       { id: 'ADR-004', decision: 'Autoscale on Kafka lag', rationale: 'Lag is a leading indicator; CPU is lagging.' },
       { id: 'ADR-005', decision: 'PySpark for batch features', rationale: 'Rolling windows over ~70M rows too slow in single-node Postgres.' },
       { id: 'FIX', decision: 'Removed 3 leaky features', rationale: 'Val AUC of 1.0 traced to peer features computed for active staff only; dropping them moved active-employee risk from ~0% to a real spread.' },
@@ -202,7 +203,7 @@ export const SYSTEMS: System[] = [
         { from: 'wh', to: 'feat' },
         { from: 'feat', to: 'score', label: 'feature_store' },
         { from: 'score', to: 'gov', label: 'every run' },
-        { from: 'gov', to: 'hitl', label: '0.35–0.65 band' },
+        { from: 'gov', to: 'hitl', label: '0.35-0.65 band' },
         { from: 'hitl', to: 'score', label: 'retrain ≥ 50 labels', dashed: true, bend: -60 },
         { from: 'wh', to: 'agent', label: 'live SQL' },
         { from: 'agent', to: 'hitl', label: 'flag_for_review', dashed: true },
@@ -223,7 +224,7 @@ export const SYSTEMS: System[] = [
     repo: 'https://github.com/Anshitaa/DocumentSync',
     promptingWouldBe: 'Upload two screenshots to a chatbot, ask it to "update my README", and copy-paste whatever comes back.',
     thisDoes:
-      'Grounds a vision model with pixel-level SSIM, retrieves only the README sections that matter, forces structured JSON with a confidence score, opens a PR instead of writing to main — and scores its own output on 11 dimensions.',
+      'Grounds a vision model with pixel-level SSIM, retrieves only the README sections that matter, forces structured JSON with a confidence score, opens a PR instead of writing to main, and scores its own output on 11 dimensions.',
     nodes: [
       {
         id: 'in', label: 'Before / after', tech: 'multipart upload', layer: 'data',
@@ -235,14 +236,14 @@ export const SYSTEMS: System[] = [
         id: 'ssim', label: 'SSIM diff', tech: 'OpenCV · scikit-image', layer: 'model',
         what: 'Structural similarity score plus Otsu-thresholded bounding boxes of the changed regions.',
         why: 'Fast, deterministic and precise about where. It gives the model numeric ground truth to be checked against.',
-        tradeoff: 'Cannot tell a colour tweak from a layout rewrite — that is what the next stage is for.',
+        tradeoff: 'Cannot tell a colour tweak from a layout rewrite. The next stage covers that.',
         emits: 'ssim 0.8542 · 1 changed region (x:100 y:200 80×30)',
       },
       {
         id: 'vision', label: 'Vision analysis', tech: 'Gemini 1.5 Flash', layer: 'agent',
         what: 'Multimodal call returns semantic_summary, changed_elements, change_type and severity.',
         why: 'SSIM says where, the model says what and why it matters. Each covers the other’s blind spot.',
-        tradeoff: '+1–2s latency and one API call per detection; would need caching at volume.',
+        tradeoff: '+1-2s latency and one API call per detection; would need caching at volume.',
         emits: 'change_type: color · severity: minor · "Submit → Continue"',
       },
       {
@@ -253,7 +254,7 @@ export const SYSTEMS: System[] = [
       },
       {
         id: 'gen', label: 'Structured generation', tech: 'JSON schema', layer: 'agent',
-        what: 'Model must return {documentation, confidence 0–1, reasoning}. Parser strips markdown fences; malformed output falls back to raw text instead of crashing.',
+        what: 'Model must return {documentation, confidence 0-1, reasoning}. Parser strips markdown fences; malformed output falls back to raw text instead of crashing.',
         why: 'Free text is not an interface. A schema lets the UI, the eval and the PR step each consume one field.',
         emits: 'confidence: 0.91 · reasoning attached',
       },
@@ -271,7 +272,7 @@ export const SYSTEMS: System[] = [
       },
       {
         id: 'eval', label: 'Eval suite', tech: 'eval.py · 11 dimensions', layer: 'eval',
-        what: '3 test cases (identical images, before→after, reversed) scored on 6 detection and 5 generation dimensions — semantic quality, confidence validity, RAG utilisation and more.',
+        what: '3 test cases (identical images, before→after, reversed) scored on 6 detection and 5 generation dimensions, including semantic quality, confidence validity and RAG use.',
         why: 'The identical-images case checks the system can say “nothing changed”. A pipeline that always finds something is broken.',
         emits: '3 cases × 11 dims scored → verdict',
       },
@@ -281,7 +282,7 @@ export const SYSTEMS: System[] = [
       { value: '11', label: 'eval dimensions' },
       { value: '3', label: 'eval cases incl. a null case' },
       { value: 'top-3', label: 'retrieved README sections' },
-      { value: '0–1', label: 'confidence on every output' },
+      { value: '0-1', label: 'confidence on every output' },
       { value: '0', label: 'direct commits to main' },
     ],
     decisions: [
@@ -306,7 +307,7 @@ export const SYSTEMS: System[] = [
       ],
     },
     gallery: [
-      { src: '/systems/docusync/ui.png', w: 1600, h: 1066, caption: 'The running app: detect, write, open a PR — or chain all three in one click.' },
+      { src: '/systems/docusync/ui.png', w: 1600, h: 1066, caption: 'The running app: detect, write and open a PR, or chain all three in one click.' },
       { src: '/systems/docusync/before.png', w: 1600, h: 1000, caption: 'Demo input: the UI before the change.' },
       { src: '/systems/docusync/after.png', w: 1600, h: 1000, caption: 'Demo input: the UI after. SSIM finds where, Gemini Vision says what.' },
     ],
@@ -336,7 +337,7 @@ export const SYSTEMS: System[] = [
         id: 'model', label: 'Scoring', tech: 'XGBoost · Isolation Forest · SHAP', layer: 'model',
         what: 'Fraud detector + anomaly detector + risk scorer; top-5 SHAP features per transaction. Probabilities are isotonic-calibrated (Brier 0.53 → 0.10). AUC 0.681 on synthetic data, 0.90+ on the IEEE-CIS real-data model.',
         why: 'Both AUCs are reported. The synthetic one is low, and saying so is the point.',
-        emits: 'score → FRAUD > 75 · REVIEW 40–75 · CLEAR < 40',
+        emits: 'score → FRAUD > 75 · REVIEW 40-75 · CLEAR < 40',
       },
       {
         id: 'cf', label: 'Counterfactuals', tech: 'Dice-ML', layer: 'eval',
@@ -352,13 +353,13 @@ export const SYSTEMS: System[] = [
       },
       {
         id: 'review', label: 'Analyst review', tech: 'REVIEW band', layer: 'human',
-        what: 'The 40–75 band goes to a person instead of being auto-decided.',
+        what: 'The 40-75 band goes to a person instead of being auto-decided.',
         why: 'The model decides the easy cases and routes the ambiguous ones to someone accountable.',
         emits: 'REVIEW queue → analyst',
       },
       {
         id: 'agent', label: 'Analyst agent', tech: 'LangChain ReAct · FAISS', layer: 'agent',
-        what: '5 tools — get_risk_summary, explain_decision, run_what_if, query_sql, search_regulations — over a FAISS index of 8 regulatory documents (FCRA, PCI DSS, SR 11-7, Reg E).',
+        what: '5 tools (get_risk_summary, explain_decision, run_what_if, query_sql, search_regulations) over a FAISS index of 8 regulatory documents (FCRA, PCI DSS, SR 11-7, Reg E).',
         why: 'The agent answers from the database and the regulations, not from memory.',
         emits: 'tool: explain_decision → search_regulations',
       },
@@ -393,7 +394,7 @@ export const SYSTEMS: System[] = [
         { from: 'feat', to: 'model', label: 'Redis lookup' },
         { from: 'model', to: 'cf', label: 'per decision' },
         { from: 'model', to: 'gov', label: 'parity · PSI' },
-        { from: 'model', to: 'review', label: 'score 40–75' },
+        { from: 'model', to: 'review', label: 'score 40-75' },
         { from: 'model', to: 'api', label: 'FRAUD / CLEAR' },
         { from: 'agent', to: 'model', label: 'explain_decision', dashed: true, bend: -70 },
         { from: 'api', to: 'agent' },
@@ -407,21 +408,21 @@ export const SYSTEMS: System[] = [
   {
     id: 'thesis',
     name: 'M.S. Thesis',
-    tagline: 'Do federal disaster declarations change birth rates? A causal pipeline — and the time I threw out my own first result.',
+    tagline: 'Do federal disaster declarations change birth rates? A causal pipeline, and the time I threw out my own first result.',
     promptingWouldBe: 'Regress births on a disaster dummy and report whatever is significant.',
     thisDoes:
-      'Builds a county-month panel, estimates a temporal regression discontinuity at every declaration, corrects for multiple testing, runs four validity checks — and rebuilt the outcome from scratch when the first version turned out to be measuring evacuation, not fertility.',
+      'Builds a county-month panel, estimates a temporal regression discontinuity at every declaration, corrects for multiple testing, and runs four validity checks. I rebuilt the outcome from scratch when the first version turned out to be measuring evacuation, not fertility.',
     nodes: [
       {
         id: 'src', label: 'Sources', tech: 'FEMA · SHELDUS · births · Census', layer: 'data',
-        what: 'FEMA declarations, SHELDUS damage records, county-month births 2007–2024, age-specific population and an SES panel.',
+        what: 'FEMA declarations, SHELDUS damage records, county-month births 2007-2024, age-specific population and an SES panel.',
         why: 'Declarations alone include events with no recorded damage; SHELDUS lets the analysis separate the two.',
         emits: 'declarations ⨝ births ⨝ population ⨝ SES  (FIPS × month)',
       },
       {
         id: 'den', label: 'Age-standardised GFR', tech: 'ASFR weights (Preston 2001)', layer: 'data',
         what: 'Each age group’s population is weighted by its national fertility rate before summing, producing log_gfr_adj.',
-        why: 'V1 used a crude denominator. When disasters displace 20–29-year-olds, it shrinks and the birth rate appears to rise with no extra births. Fixed weights do not react to who left.',
+        why: 'V1 used a crude denominator. When disasters displace 20-29-year-olds, it shrinks and the birth rate appears to rise with no extra births. Fixed weights do not react to who left.',
         emits: 'outcome = log_gfr_adj',
       },
       {
@@ -431,10 +432,10 @@ export const SYSTEMS: System[] = [
         emits: 'τ (level jump), δ (slope change) per pair × window',
       },
       {
-        id: 'fdr', label: 'Multiple testing', tech: 'Benjamini–Hochberg', layer: 'eval',
+        id: 'fdr', label: 'Multiple testing', tech: 'Benjamini-Hochberg', layer: 'eval',
         what: 'BH-FDR correction across thousands of estimates.',
-        why: 'With 25K+ tests, some will be significant by chance. 0 survive at ±7 months in the observed spec — that null is the finding.',
-        emits: '0 BH-FDR significant at W±7 (observed) → robust null',
+        why: 'With 25K+ tests, some will be significant by chance. None survive at ±7 months in the observed spec, and that null is the finding.',
+        emits: '0 BH-FDR significant at W±7 (observed) → national null holds',
       },
       {
         id: 'valid', label: 'Validity checks', tech: 'McCrary · CCT · dose-response', layer: 'eval',
@@ -456,7 +457,7 @@ export const SYSTEMS: System[] = [
       },
       {
         id: 'out', label: 'Findings', tech: 'heterogeneity by hazard & SES', layer: 'infra',
-        what: 'Robust national null; winter storms −3.52% (imputed); low-income counties take a 4.13pp larger hit; ice storms positive.',
+        what: 'There is no national effect after correction. Broken out by hazard and mapped by state, the picture splits: winter storms lower fertility by 3.52% (imputed), low-income counties take a 4.13pp larger hit, and ice storms push it up.',
         why: 'A null average can hide opposing mechanisms. Stratifying is how you find them.',
         emits: 'Winter Storm −3.52%* · income gap −4.13pp*',
       },
@@ -464,7 +465,7 @@ export const SYSTEMS: System[] = [
     receipts: [
       { value: '3,227', label: 'counties (imputed panel)' },
       { value: '25,531', label: 'county-declaration pairs' },
-      { value: '2007–24', label: 'monthly births' },
+      { value: '2007-24', label: 'monthly births' },
       { value: '30.4%', label: 'estimates flipped by my fix' },
       { value: 'r = 0.996', label: 'observed vs imputed' },
       { value: '4', label: 'validity checks' },
@@ -490,9 +491,11 @@ export const SYSTEMS: System[] = [
       ],
     },
     gallery: [
+      { src: '/systems/thesis/us-map-winter-storm.png', w: 1600, h: 698, wide: true, caption: 'Winter storm effect by state (±7 months, imputed). Red marks a decline; the Northern Plains and New England carry most of it.' },
+      { src: '/systems/thesis/state-bins.png', w: 1581, h: 734, wide: true, caption: 'Where the effect concentrates, by state. Winter storms pull fertility down while severe ice storms push it up in a different set of states. Blue marks a decline here, gold a rise.' },
       { src: '/systems/thesis/heatmap.png', w: 1600, h: 1220, caption: 'Effect by hazard × window. Winter storms suppress; severe ice storms raise.' },
       { src: '/systems/thesis/v1-vs-v3.png', w: 1600, h: 673, caption: 'The self-audit: V1 vs V3 estimates, r = 0.666. Much of V1 was a denominator artifact.' },
-      { src: '/systems/thesis/density-test.png', w: 1600, h: 569, caption: 'McCrary density test — no bunching at the cutoff.' },
+      { src: '/systems/thesis/density-test.png', w: 1600, h: 569, caption: 'McCrary density test: no bunching at the cutoff.' },
       { src: '/systems/thesis/dose-response.png', w: 1600, h: 981, caption: 'Continuous treatment: effect size against recorded damage.' },
     ],
   },

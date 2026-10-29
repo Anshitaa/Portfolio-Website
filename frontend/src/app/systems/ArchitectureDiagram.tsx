@@ -3,11 +3,11 @@
 import { LAYER_STYLES, type System } from './data';
 
 // Grid geometry (SVG user units)
-const NODE_W = 190;
-const NODE_H = 58;
-const COL_GAP = 292;
-const ROW_GAP = 112;
-const PAD_X = 112; // room for lane labels on the left
+const NODE_W = 212;
+const NODE_H = 68;
+const COL_GAP = 318;
+const ROW_GAP = 124;
+const PAD_X = 126; // room for lane labels on the left
 const PAD_Y = 34;
 
 const center = (col: number, row: number) => ({
@@ -48,7 +48,7 @@ export default function ArchitectureDiagram({ system, selected, cursor, running,
     >
       <defs>
         <marker id={`arrow-${system.id}`} viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-          <path d="M0,0 L10,5 L0,10 z" fill="#9ca3af" />
+          <path d="M0,0 L10,5 L0,10 z" fill="#64748b" />
         </marker>
         <marker id={`arrow-on-${system.id}`} viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
           <path d="M0,0 L10,5 L0,10 z" fill="#7c3aed" />
@@ -62,8 +62,8 @@ export default function ArchitectureDiagram({ system, selected, cursor, running,
           <g key={lane}>
             <rect x={8} y={y} width={width - 16} height={ROW_GAP - 6} rx={12}
               fill={row % 2 ? '#ffffff' : '#f8f7fc'} />
-            <text x={22} y={y + 20 + NODE_H / 2 + 4} fontSize={11} fontWeight={600}
-              fill="#9ca3af" letterSpacing="0.06em">
+            <text x={22} y={y + 20 + NODE_H / 2 + 5} fontSize={13} fontWeight={600}
+              fill="#6b7280" letterSpacing="0.05em">
               {lane.toUpperCase()}
             </text>
           </g>
@@ -91,13 +91,13 @@ export default function ArchitectureDiagram({ system, selected, cursor, running,
         const lit = cursor >= 0 && reached(e.from) && reached(e.to);
         const mx = bend ? 0.25 * p1.x + 0.5 * ctrl.x + 0.25 * p2.x : (p1.x + p2.x) / 2;
         const my = bend ? 0.25 * p1.y + 0.5 * ctrl.y + 0.25 * p2.y : (p1.y + p2.y) / 2;
-        const lw = e.label ? e.label.length * 5.9 + 12 : 0;
+        const lw = e.label ? e.label.length * 7.1 + 14 : 0;
         return (
           <g key={`${e.from}-${e.to}`}>
             <path
               d={d}
               fill="none"
-              stroke={lit ? '#7c3aed' : '#cbd5e1'}
+              stroke={lit ? '#7c3aed' : '#94a3b8'}
               strokeWidth={lit ? 2 : 1.5}
               strokeDasharray={e.dashed ? '5 5' : undefined}
               markerEnd={`url(#${lit ? 'arrow-on' : 'arrow'}-${system.id})`}
@@ -107,10 +107,10 @@ export default function ArchitectureDiagram({ system, selected, cursor, running,
             </path>
             {e.label && (
               <g>
-                <rect x={mx - lw / 2} y={my - 9} width={lw} height={18} rx={9}
+                <rect x={mx - lw / 2} y={my - 11} width={lw} height={22} rx={11}
                   fill="#ffffff" stroke={e.dashed ? '#c4b5fd' : '#e5e7eb'} />
-                <text x={mx} y={my + 3.5} fontSize={10} textAnchor="middle"
-                  fill={e.dashed ? '#7c3aed' : '#6b7280'} fontFamily="var(--font-geist-mono), monospace">
+                <text x={mx} y={my + 4} fontSize={12} textAnchor="middle"
+                  fill={e.dashed ? '#6d28d9' : '#374151'} fontFamily="var(--font-geist-mono), monospace">
                   {e.label}
                 </text>
               </g>
@@ -151,9 +151,9 @@ export default function ArchitectureDiagram({ system, selected, cursor, running,
               strokeWidth={isSel ? 2.25 : 1.25}
               className="transition-all duration-300" />
             <rect x={x} y={y + 10} width={3.5} height={NODE_H - 20} rx={1.75} fill={s.hex} />
-            <text x={x + 16} y={y + 24} fontSize={13} fontWeight={600} fill="#111827">{n.label}</text>
-            <text x={x + 16} y={y + 42} fontSize={10.5} fill="#6b7280">
-              {n.tech.length > 32 ? n.tech.slice(0, 31) + '…' : n.tech}
+            <text x={x + 16} y={y + 28} fontSize={16} fontWeight={600} fill="#111827">{n.label}</text>
+            <text x={x + 16} y={y + 50} fontSize={12.5} fill="#374151">
+              {n.tech.length > 29 ? n.tech.slice(0, 28) + '…' : n.tech}
             </text>
             {done && (
               <g>

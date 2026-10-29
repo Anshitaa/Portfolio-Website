@@ -3,6 +3,7 @@ import { personalInfoQuery, publicationsQuery } from '@/lib/queries';
 import Image from 'next/image';
 import Link from 'next/link';
 import NavBar from './components/NavBar';
+import TypingAnimation from './components/TypingAnimation';
 import ContactForm from './components/ContactForm';
 
 // ─── Type Definitions ────────────────────────────────────────────────────────
@@ -107,7 +108,7 @@ const EXPERIENCE = [
     role: 'Research Assistant',
     org: 'Arizona State University',
     place: 'Tempe, AZ',
-    dates: 'Feb 2024 – Present',
+    dates: 'Feb 2024 to Present',
     points: [
       'Delivered a national study of whether federal disaster declarations change US birth rates over 1.5M+ birth records across 28 years, building automated Python pipelines that raised data granularity 200x.',
       'Caught an error in my own method, where the birth-rate measure was picking up shifts in county age makeup rather than real change, then rebuilt it on an age-standardized denominator, validated it at r = 0.996 and re-ran the study.',
@@ -117,7 +118,7 @@ const EXPERIENCE = [
     role: 'Data Analyst',
     org: 'Escorts Kubota Limited',
     place: 'Haryana, India',
-    dates: 'Jun 2023 – Jun 2024',
+    dates: 'Jun 2023 to Jun 2024',
     points: [
       'Cut inventory costs 10% and raised planning efficiency 25% across 50+ products with LSTM demand-forecasting models that operations teams ran daily in production.',
       'Improved forecast accuracy 18% with feature engineering pipelines, and cut equipment downtime 30% with a predictive-maintenance model.',
@@ -127,7 +128,7 @@ const EXPERIENCE = [
     role: 'Data Analyst Intern',
     org: 'JustDial Ltd.',
     place: 'Maharashtra, India',
-    dates: 'Jun 2022 – Aug 2022',
+    dates: 'Jun 2022 to Aug 2022',
     points: [
       'Reached 92% accuracy on 10,000+ unstructured reviews by fine-tuning a BERT model, and raised search relevance 15% with a TF-IDF retrieval pipeline.',
     ],
@@ -135,6 +136,13 @@ const EXPERIENCE = [
 ];
 
 const EMAIL_FALLBACK = 'anshita.inbox@gmail.com';
+
+const HERO_ROLES = [
+  'M.S. Data Science @ ASU',
+  'Machine Learning Engineer',
+  'AI Systems Developer',
+  'Data Scientist',
+];
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
@@ -150,42 +158,78 @@ export default async function Home() {
 
       {/* ── Hero ── */}
       <section className="bg-white border-b border-gray-200">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-14 sm:pt-20 pb-14 grid md:grid-cols-[1fr_260px] lg:grid-cols-[1fr_300px] gap-10 items-center">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-14 sm:pt-20 pb-14 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
-            <p className="text-sm font-medium text-purple-600">AI engineer · ML systems · New York</p>
-            <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05]">
-              I build AI that ships as systems, <span className="text-purple-600">not prompts.</span>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
+              Hi, I&apos;m{' '}
+              <span className="bg-gradient-to-r from-purple-600 to-violet-500 bg-clip-text text-transparent">
+                Anshita Bhardwaj
+              </span>
             </h1>
-            <p className="mt-6 max-w-2xl text-lg text-gray-600 leading-relaxed">
-              Retrieval, evaluation, guardrails and a human in the loop, in every project. Most recently a
-              workforce-risk platform, a real-time fraud scorer and an agentic docs pipeline.
-              M.S. Data Science, Arizona State University.
+            <div className="mt-4 text-xl sm:text-2xl min-h-[2.5rem] flex items-center">
+              <TypingAnimation texts={HERO_ROLES} className="text-purple-600 font-semibold" />
+            </div>
+            <p className="mt-6 max-w-xl text-lg text-gray-600 leading-relaxed">
+              I design and ship AI systems with retrieval, evaluation, guardrails and a human in the loop.
+              Most recently that meant a workforce-risk platform, a real-time fraud scorer and an agentic docs
+              pipeline. M.S. Data Science, Arizona State University.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Link href="/systems" className="rounded-full bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-purple-700">
-                See the systems
-              </Link>
+
+            <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-gray-500">
+              <a href={`mailto:${email}`} className="flex items-center gap-1.5 hover:text-purple-600">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                {email}
+              </a>
+              <span className="hidden sm:inline text-gray-300">·</span>
+              <span className="flex items-center gap-1.5">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                New York, NY
+              </span>
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a href={github} target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-900 hover:bg-gray-700 text-white text-sm font-medium rounded-xl transition-colors">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" /></svg>
+                GitHub
+              </a>
+              <a href={linkedin} target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-xl transition-colors">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
+                LinkedIn
+              </a>
               <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"
-                className="rounded-full border border-gray-300 bg-white px-5 py-2.5 text-sm font-semibold text-gray-800 hover:border-purple-400">
+                className="inline-flex items-center gap-2 px-5 py-2.5 border border-purple-200 text-purple-600 hover:bg-purple-50 text-sm font-medium rounded-xl transition-colors">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
                 Resume
               </a>
-              <span className="mx-1 hidden sm:inline h-5 w-px bg-gray-200" />
-              <a href={github} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gray-600 hover:text-purple-600">GitHub</a>
-              <a href={linkedin} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gray-600 hover:text-purple-600">LinkedIn</a>
-              <a href={`mailto:${email}`} className="text-sm font-medium text-gray-600 hover:text-purple-600">Email</a>
             </div>
           </div>
 
           {personalInfo?.image && (
-            <div className="relative mx-auto w-48 sm:w-56 md:w-full aspect-square overflow-hidden rounded-2xl border border-gray-200 bg-gray-100">
-              <Image
-                src={personalInfo.image}
-                alt={personalInfo.imageAlt || 'Anshita Bhardwaj'}
-                fill
-                sizes="(min-width: 1024px) 300px, (min-width: 768px) 260px, 224px"
-                className="object-cover"
-                priority
-              />
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative w-[280px] sm:w-[360px] lg:w-[420px]">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-300/40 to-violet-300/40 rounded-2xl rotate-6 scale-105" />
+                <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl hover:-translate-y-2 transition-transform duration-300">
+                  <Image
+                    src={personalInfo.image}
+                    alt={personalInfo.imageAlt || 'Anshita Bhardwaj'}
+                    fill
+                    sizes="(min-width: 1024px) 420px, (min-width: 640px) 360px, 280px"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              </div>
             </div>
           )}
         </div>
@@ -260,14 +304,15 @@ export default async function Home() {
               <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">M.S. thesis · causal inference</p>
               <h3 className="mt-2 text-2xl font-bold tracking-tight">Do disasters change birth rates?</h3>
               <p className="mt-3 text-gray-600 leading-relaxed">
-                A temporal regression discontinuity at every FEMA declaration across US counties, 2007–2024,
-                with multiple-testing correction and four validity checks.
+                A temporal regression discontinuity at every FEMA declaration across US counties from 2007 to 2024,
+                with multiple-testing correction and four validity checks. I then mapped the effects by state to
+                see where each hazard concentrates.
               </p>
               <div className="mt-5 border-l-2 border-purple-300 pl-4">
                 <p className="text-[11px] font-semibold uppercase tracking-wider text-purple-600">Judgment call</p>
                 <p className="mt-1 text-sm text-gray-800 leading-relaxed">
-                  Found my first outcome was measuring evacuation, not fertility. Rebuilt it on an age-standardised
-                  denominator; 30.4% of estimates flipped sign.
+                  I found my first outcome was measuring evacuation, not fertility, so I rebuilt it on an
+                  age-standardised denominator. 30.4% of the estimates flipped sign.
                 </p>
               </div>
               <dl className="mt-6 grid grid-cols-3 gap-3">
@@ -283,9 +328,14 @@ export default async function Home() {
                 <Link href="/systems#thesis" className="text-purple-600 hover:text-purple-800">See the pipeline →</Link>
               </div>
             </div>
-            <Link href="/systems#thesis" className="block bg-white border-t lg:border-t-0 lg:border-l border-gray-200 p-4">
-              <Image src="/systems/thesis/heatmap.png" alt="Effect of disaster declarations on fertility by hazard and window"
-                width={1600} height={1220} className="w-full h-auto" sizes="(min-width: 1024px) 540px, 100vw" />
+            <Link href="/systems#thesis" className="flex flex-col justify-center bg-[#0f172a] border-t lg:border-t-0 lg:border-l border-gray-200">
+              <Image src="/systems/thesis/us-map-winter-storm.png"
+                alt="Map of US states showing the change in fertility after winter storm declarations"
+                width={1600} height={698} className="w-full h-auto" sizes="(min-width: 1024px) 560px, 100vw" />
+              <p className="px-5 pb-4 pt-1 text-xs text-slate-300">
+                Winter storm effect by state (±7 months, imputed). Red marks a decline; most of it sits in the
+                Northern Plains and New England.
+              </p>
             </Link>
           </article>
         </div>
