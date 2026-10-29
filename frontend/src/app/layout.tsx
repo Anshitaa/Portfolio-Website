@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Anshita Bhardwaj - Data Scientist & AI Researcher",
-  description: "M.S. Data Science @ ASU | Specializing in Explainable AI, LLM-Powered Agents, and MLOps",
+  title: "Anshita Bhardwaj — AI engineer",
+  description: "I build AI that ships as systems, not prompts: agentic ML platforms, real-time fraud scoring and causal inference. M.S. Data Science, ASU. New York.",
 };
 
 export default function RootLayout({

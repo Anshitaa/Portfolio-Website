@@ -287,6 +287,12 @@ export default function Showcase() {
   const [loopStep, setLoopStep] = useState(0);
   const system = SYSTEMS.find(s => s.id === active) ?? SYSTEMS[0];
 
+  // Deep links from the homepage: /systems#talentlens opens that system's tab
+  useEffect(() => {
+    const id = window.location.hash.slice(1);
+    if (SYSTEMS.some(s => s.id === id)) setActive(id);
+  }, []);
+
   return (
     <main className="min-h-screen bg-[#fafafa] text-gray-900">
       {/* Top bar */}
@@ -375,6 +381,8 @@ export default function Showcase() {
 
       {/* Systems */}
       <section id="systems" className="max-w-6xl mx-auto px-4 sm:px-6 py-16 scroll-mt-16">
+        {/* Hash targets so /systems#talentlens etc. land on this section */}
+        {SYSTEMS.map(s => <span key={s.id} id={s.id} className="block scroll-mt-20" aria-hidden="true" />)}
         <p className="text-sm font-medium text-purple-600">The systems</p>
         <h2 className="mt-2 text-3xl font-bold tracking-tight">Drawn as they are built</h2>
 
