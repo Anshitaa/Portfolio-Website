@@ -241,20 +241,6 @@ export default async function Home() {
           )}
         </div>
 
-        {/* Proof strip */}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 pb-12 grid grid-cols-2 lg:grid-cols-4 gap-3">
-          {[
-            ['3', 'production-pattern AI systems'],
-            ['25,531', 'causal estimates in my thesis'],
-            [String(publications?.length || 5), 'research papers'],
-            ['3', 'industry and research roles'],
-          ].map(([value, label]) => (
-            <div key={label} className="rounded-xl border border-gray-200 bg-white p-4">
-              <p className="text-2xl font-bold tabular-nums tracking-tight">{value}</p>
-              <p className="mt-1 text-xs text-gray-500 leading-snug">{label}</p>
-            </div>
-          ))}
-        </div>
       </section>
 
       {/* ── Flagship work ── */}
